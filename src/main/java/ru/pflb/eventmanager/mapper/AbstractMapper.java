@@ -3,14 +3,14 @@ package ru.pflb.eventmanager.mapper;
 import org.modelmapper.Converter;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import ru.pflb.eventmanager.dto.AbstractDTO;
+import ru.pflb.eventmanager.dto.AbstractDto;
 import ru.pflb.eventmanager.entity.AbstractEntity;
 
 import javax.annotation.PostConstruct;
 import java.util.Objects;
 import java.util.function.Consumer;
 
-public abstract class AbstractMapper<E extends AbstractEntity, D extends AbstractDTO> implements EntityDTOMapper<E, D> {
+public abstract class AbstractMapper<E extends AbstractEntity, D extends AbstractDto> implements EntityDTOMapper<E, D> {
 
     @Autowired
     protected ModelMapper mapper;

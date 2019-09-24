@@ -11,7 +11,7 @@ import java.util.List;
 
 @EqualsAndHashCode(callSuper = true)
 @Data
-public class EventDTO extends AbstractDTO {
+public class EventDto extends AbstractDto {
 
     @NotNull(groups = {Validation.New.class})
     private String name;

@@ -1,13 +1,21 @@
 package ru.pflb.eventmanager.service;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import ru.pflb.eventmanager.dto.UserDTO;
-import ru.pflb.eventmanager.entity.User;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import ru.pflb.eventmanager.dto.UserDto;
+
 
 public interface UserService {
-    UserDTO create(UserDTO dto) throws JsonProcessingException;
+    UserDto create(UserDto dto) throws JsonProcessingException;
 
-    UserDTO getByCredentials(String username, String login);
+    UserDto update(UserDto dto) throws JsonProcessingException;
 
-    UserDTO get(Long id);
+    UserDto get(Long id);
+
+    UserDto getByCredentials(String username, String login);
+
+    Page<UserDto> getAll(Pageable pageable);
+
+    boolean delete(Long id);
 }

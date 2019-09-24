@@ -12,7 +12,7 @@ import java.util.List;
 
 @EqualsAndHashCode(callSuper = true)
 @Data
-public class UserDTO extends AbstractDTO {
+public class UserDto extends AbstractDto {
 
     @NotNull(groups = {Validation.New.class, Validation.Login.class})
     @Null(groups = {Validation.Exists.class})
