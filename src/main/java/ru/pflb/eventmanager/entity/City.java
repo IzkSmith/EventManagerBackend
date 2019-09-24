@@ -5,11 +5,9 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
-import javax.persistence.Column;
+import javax.persistence.Access;
+import javax.persistence.AccessType;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import java.util.List;
 
@@ -20,11 +18,9 @@ import java.util.List;
 @ToString
 @Entity
 public class City extends AbstractEntity {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id")
-    private long id;
-    private String cName;
+
+    private String name;
+    @Access(AccessType.FIELD)
     @OneToMany(mappedBy="city")
     private List<Event> events;
 

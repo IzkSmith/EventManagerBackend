@@ -1,5 +1,7 @@
 package ru.pflb.eventmanager.entity;
 
+import lombok.Setter;
+
 import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -11,13 +13,12 @@ import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.Objects;
 
+@Setter
 @MappedSuperclass
 public abstract class AbstractEntity implements Serializable {
     private static final int START_SEQ = 1000000000;
 
     private Long id;
-    private LocalDateTime created;
-    private LocalDateTime updated;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,11 +26,15 @@ public abstract class AbstractEntity implements Serializable {
         return id;
     }
 
+
+    /*
+    private LocalDateTime created;
+    private LocalDateTime updated;
+
     @Column(name = "created", updatable = false)
     private LocalDateTime getCreated() {
         return created;
     }
-
     @Column(name = "updated", insertable = false)
     public LocalDateTime getUpdated() {
         return updated;
@@ -46,16 +51,5 @@ public abstract class AbstractEntity implements Serializable {
     void onUpdate() {
         this.setUpdated(LocalDateTime.now());
     }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    private void setCreated(LocalDateTime created) {
-        this.created = created;
-    }
-
-    private void setUpdated(LocalDateTime updated) {
-        this.updated = updated;
-    }
+    */
 }

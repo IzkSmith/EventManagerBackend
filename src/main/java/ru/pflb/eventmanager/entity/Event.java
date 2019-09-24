@@ -6,11 +6,9 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
-import javax.persistence.Column;
+import javax.persistence.Access;
+import javax.persistence.AccessType;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import java.util.List;
@@ -22,18 +20,18 @@ import java.util.List;
 @ToString
 @Entity
 public class Event extends AbstractEntity {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id")
-    private long id;
-    private String ename;
 
-    @ManyToOne
-    private City city;
+    private String name;
     private String date;
     private int maxMembers;
     private String description;
-    @ManyToMany
+
+    @Access(AccessType.FIELD)
+    @ManyToOne(targetEntity=City.class)
+    private City city;
+
+    @Access(AccessType.FIELD)
+    @ManyToMany(targetEntity=User.class)
     private List<User> users;
 
 }

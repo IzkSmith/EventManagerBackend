@@ -1,10 +1,10 @@
-package ru.pflb.eventmanager.Controller;
+package ru.pflb.eventmanager.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/city")
-public class CityController {
-}
+@RequestMapping("/role")
+public class RoleController {
 
+}
