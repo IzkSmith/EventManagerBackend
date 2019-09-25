@@ -1,0 +1,12 @@
+insert into CITY values (1,'Москва');
+insert into CITY values (2,'Тула');
+insert into CITY values (3,'Тюмень');
+insert into ROLE values (1,'Admin');
+insert into ROLE values (2,'Holder');
+insert into ROLE values (3,'Member');
+insert into USER values (1,'admin@gmail.com','sa','sa');
+insert into USER values (2,'holder@gmail.com','holder','holder');
+insert into USER values (3,'member@gmail.com','member','member');
+insert into ROLE_USERS values (1,1);
+insert into ROLE_USERS values (2,2);
+insert into ROLE_USERS values (3,3);
