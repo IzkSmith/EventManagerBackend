@@ -53,16 +53,17 @@ public class EventServiceImpl implements EventService {
 
     @Override
     public Page<EventDto> getAll(Pageable pageable) {
-        Page<Event> eventss = repository.findAll(pageable);
+        Page<Event> events = repository.findAll(pageable);
         return new PageImpl<>(
-                eventss.getContent()
+                events.getContent()
                         .stream()
                         .map(mapper::toDto)
                         .collect(Collectors.toList()),
                 pageable,
-                eventss.getTotalElements()
+                events.getTotalElements()
         );
     }
+
 
     @Override
     public boolean delete(Long id) {

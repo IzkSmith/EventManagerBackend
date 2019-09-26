@@ -9,4 +9,4 @@ insert into USER values (2,'holder@gmail.com','holder','holder');
 insert into USER values (3,'member@gmail.com','member','member');
 insert into ROLE_USERS values (1,1);
 insert into ROLE_USERS values (2,2);
-insert into ROLE_USERS values (3,3);
+insert into ROLE_USERS values (3,3)

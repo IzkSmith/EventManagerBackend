@@ -1,0 +1,5 @@
+CREATE TABLE EVENT_USERS
+(
+    events_id BIGINT NOT NULL,
+    users_id BIGINT NOT NULL
+);

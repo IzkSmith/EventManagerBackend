@@ -1,0 +1,5 @@
+CREATE TABLE ROLE_USERS
+(
+    roles_id BIGINT NOT NULL,
+    users_id BIGINT NOT NULL
+);
