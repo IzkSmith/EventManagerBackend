@@ -1,1 +1,0 @@
-insert into ROLE_USERS values (2,2);

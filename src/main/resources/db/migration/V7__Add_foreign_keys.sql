@@ -1,10 +1,10 @@
-alter table EVENT
-    add constraint EVENT_CITY_FK foreign key (city_id) references city;
-alter table EVENT_USERS
-    add constraint EVENT_USERS_USER_FK foreign key (users_id) references user;
-alter table EVENT_USERS
-    add constraint EVENT_USERS_EVENT_FK foreign key (events_id) references event;
-alter table ROLE_USERS
-    add constraint ROLE_USERS_USER_FK foreign key (users_id) references user;
-alter table ROLE_USERS
-    add constraint ROLE_USERS_ROLE_FK foreign key (roles_id) references role;
+ALTER TABLE EVENT
+    ADD CONSTRAINT EVENT_CITY_FK FOREIGN KEY (city_id) REFERENCES CITY;
+ALTER TABLE USER_EVENT
+    ADD CONSTRAINT USER_EVENT_USER_FK FOREIGN KEY (user_id) REFERENCES USER;
+ALTER TABLE USER_EVENT
+    ADD CONSTRAINT USER_EVENT_EVENT_FK FOREIGN KEY (event_id) REFERENCES EVENT;
+ALTER TABLE USER_ROLE
+    ADD CONSTRAINT USER_ROLE_USER_FK FOREIGN KEY (user_id) REFERENCES USER;
+ALTER TABLE USER_ROLE
+    ADD CONSTRAINT USER_ROLE_ROLE_FK FOREIGN KEY (role_id) REFERENCES ROLE;

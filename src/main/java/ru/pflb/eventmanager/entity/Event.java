@@ -8,7 +8,11 @@ import lombok.ToString;
 
 import javax.persistence.Access;
 import javax.persistence.AccessType;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import java.util.List;
@@ -31,7 +35,11 @@ public class Event extends AbstractEntity {
     private City city;
 
     @Access(AccessType.FIELD)
-    @ManyToMany(targetEntity=User.class)
+    @ManyToMany(cascade = {CascadeType.DETACH},targetEntity=User.class,fetch= FetchType.LAZY)
+    @JoinTable(name = "user_event",
+            joinColumns = @JoinColumn(name = "event_id"),
+            inverseJoinColumns = @JoinColumn(name = "user_id")
+    )
     private List<User> users;
 
 }

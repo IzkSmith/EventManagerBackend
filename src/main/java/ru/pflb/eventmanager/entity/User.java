@@ -8,9 +8,12 @@ import lombok.ToString;
 
 import javax.persistence.Access;
 import javax.persistence.AccessType;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import java.util.List;
 
@@ -29,11 +32,19 @@ public class User extends AbstractEntity {
     private String email;
 
     @Access(AccessType.FIELD)
-    @ManyToMany(targetEntity=Event.class,mappedBy="users",fetch=FetchType.LAZY)
+    @ManyToMany(cascade = {CascadeType.DETACH},targetEntity=Event.class,fetch= FetchType.LAZY)
+    @JoinTable(name = "user_event",
+            joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "event_id")
+    )
     private List<Event> events;
 
     @Access(AccessType.FIELD)
-    @ManyToMany(targetEntity=Role.class,mappedBy="users",fetch= FetchType.LAZY)
+    @ManyToMany(cascade = {CascadeType.DETACH},targetEntity=Role.class,fetch= FetchType.LAZY)
+    @JoinTable(name = "user_role",
+            joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "role_id")
+    )
     private List<Role> roles;
 
 }
