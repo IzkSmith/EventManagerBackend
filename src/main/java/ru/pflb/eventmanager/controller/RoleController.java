@@ -1,6 +1,8 @@
 package ru.pflb.eventmanager.controller;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -30,6 +32,11 @@ public class RoleController {
     @GetMapping("/{id}")
     public ResponseEntity<RoleDto> get(@PathVariable Long id) {
         return ResponseEntity.ok(service.get(id));
+    }
+
+    @GetMapping("/roles")
+    public ResponseEntity<Page<RoleDto>> getAll(Pageable pageable) {
+        return ResponseEntity.ok(service.getAll(pageable));
     }
 
     @PostMapping

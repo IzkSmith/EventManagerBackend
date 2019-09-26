@@ -1,6 +1,8 @@
 package ru.pflb.eventmanager.controller;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -29,6 +31,11 @@ public class UserController {
     @GetMapping("/{id}")
     public ResponseEntity<UserDto> get(@PathVariable Long id) {
         return ResponseEntity.ok(service.get(id));
+    }
+
+    @GetMapping("/users")
+    public ResponseEntity<Page<UserDto>> getAll(Pageable pageable) {
+        return ResponseEntity.ok(service.getAll(pageable));
     }
 
     @PostMapping

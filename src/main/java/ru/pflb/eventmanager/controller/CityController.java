@@ -1,6 +1,7 @@
 package ru.pflb.eventmanager.controller;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
@@ -15,8 +16,6 @@ import org.springframework.web.bind.annotation.RestController;
 import ru.pflb.eventmanager.dto.CityDto;
 import ru.pflb.eventmanager.service.CityService;
 import ru.pflb.eventmanager.transfer.Validation;
-
-import java.util.List;
 
 @RestController
 @RequestMapping("/city")
@@ -33,7 +32,10 @@ public class CityController {
         return ResponseEntity.ok(service.get(id));
     }
 
-
+    @GetMapping("/cities")
+     public ResponseEntity<Page<CityDto>> getAll(Pageable pageable) {
+        return ResponseEntity.ok(service.getAll(pageable));
+    }
 
     @PostMapping
     public ResponseEntity<CityDto> create(@Validated(value = Validation.New.class) @RequestBody CityDto dto)
