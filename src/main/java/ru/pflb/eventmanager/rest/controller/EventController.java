@@ -31,7 +31,7 @@ public class EventController {
         return ResponseEntity.ok(service.get(id));
     }
 
-    @GetMapping("/events")
+    @GetMapping("/all")
     public ResponseEntity<Page<EventDto>> getAll(Pageable pageable) {
         return ResponseEntity.ok(service.getAll(pageable));
     }

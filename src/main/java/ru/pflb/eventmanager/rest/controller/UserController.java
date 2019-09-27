@@ -46,7 +46,7 @@ public class UserController {
         return ResponseEntity.ok(userService.get(id));
     }
 
-    @GetMapping("/users")
+    @GetMapping("/all")
     public ResponseEntity<Page<UserDto>> getAll(Pageable pageable) {
         return ResponseEntity.ok(userService.getAll(pageable));
     }

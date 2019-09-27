@@ -34,7 +34,7 @@ public class RoleController {
         return ResponseEntity.ok(service.get(id));
     }
 
-    @GetMapping("/roles")
+    @GetMapping("/all")
     public ResponseEntity<Page<RoleDto>> getAll(Pageable pageable) {
         return ResponseEntity.ok(service.getAll(pageable));
     }

@@ -32,7 +32,7 @@ public class CityController {
         return ResponseEntity.ok(service.get(id));
     }
 
-    @GetMapping("/cities")
+    @GetMapping("/all")
      public ResponseEntity<Page<CityDto>> getAll(Pageable pageable) {
         return ResponseEntity.ok(service.getAll(pageable));
     }

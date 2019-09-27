@@ -1,6 +1,7 @@
 package ru.pflb.eventmanager.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.h2.H2ConsoleProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -26,6 +27,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     private static final String LOGIN_ENDPOINT = "/api/v1/auth/login";
 
     @Autowired
+    private H2ConsoleProperties console;
+
+    @Autowired
     public SecurityConfig(JwtTokenProvider jwtTokenProvider) {
         this.jwtTokenProvider = jwtTokenProvider;
     }
@@ -49,6 +53,15 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .anyRequest().authenticated()
                 .and()
                 .apply(new JwtConfigurer(jwtTokenProvider));
+
+        //h2-console access
+        String path = this.console.getPath();
+        String antPattern = (path.endsWith("/") ? path + "**" : path + "/**");
+        HttpSecurity h2Console = http.antMatcher(antPattern);
+        h2Console.csrf().disable();
+        h2Console.httpBasic();
+        h2Console.headers().frameOptions().sameOrigin();
+        http.authorizeRequests().anyRequest().permitAll();
     }
 }
 
