@@ -4,5 +4,8 @@ CREATE TABLE USER
     email VARCHAR(255) UNIQUE NOT NULL,
     password VARCHAR(255) UNIQUE NOT NULL,
     username VARCHAR(255) UNIQUE NOT NULL,
+    created TIMESTAMP,
+    status VARCHAR(255),
+    updated TIMESTAMP,
     primary key (id)
 );

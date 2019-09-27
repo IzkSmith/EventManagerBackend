@@ -6,5 +6,8 @@ CREATE TABLE EVENT
     max_members INT NOT NULL,
     name VARCHAR(255),
     city_id BIGINT NOT NULL,
+    created TIMESTAMP,
+    status VARCHAR(255),
+    updated TIMESTAMP,
     primary key (id)
 );

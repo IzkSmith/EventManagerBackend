@@ -30,12 +30,10 @@ public class Event extends AbstractEntity {
     private int maxMembers;
     private String description;
 
-    @Access(AccessType.FIELD)
-    @ManyToOne(targetEntity=City.class)
+    @ManyToOne
     private City city;
 
-    @Access(AccessType.FIELD)
-    @ManyToMany(cascade = {CascadeType.DETACH},targetEntity=User.class,fetch= FetchType.LAZY)
+    @ManyToMany(fetch= FetchType.EAGER)
     @JoinTable(name = "user_event",
             joinColumns = @JoinColumn(name = "event_id"),
             inverseJoinColumns = @JoinColumn(name = "user_id")

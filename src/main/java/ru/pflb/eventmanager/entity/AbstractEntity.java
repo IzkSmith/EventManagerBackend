@@ -1,8 +1,13 @@
 package ru.pflb.eventmanager.entity;
 
+import lombok.Data;
 import lombok.Setter;
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedDate;
 
 import javax.persistence.Column;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -13,32 +18,26 @@ import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.Objects;
 
-@Setter
+@Data
 @MappedSuperclass
 public abstract class AbstractEntity implements Serializable {
     private static final int START_SEQ = 1000000000;
 
-    private Long id;
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    public Long getId() {
-        return id;
-    }
+    private Long id;
 
-
-    /*
+    @CreatedDate
+    @Column(name = "created", updatable = false)
     private LocalDateTime created;
+
+    @LastModifiedDate
+    @Column(name = "updated",insertable = false)
     private LocalDateTime updated;
 
-    @Column(name = "created", updatable = false)
-    private LocalDateTime getCreated() {
-        return created;
-    }
-    @Column(name = "updated", insertable = false)
-    public LocalDateTime getUpdated() {
-        return updated;
-    }
+    @Enumerated(EnumType.STRING)
+    @Column(name = "status")
+    private Status status;
 
     @PrePersist
     void onCreate() {
@@ -51,5 +50,4 @@ public abstract class AbstractEntity implements Serializable {
     void onUpdate() {
         this.setUpdated(LocalDateTime.now());
     }
-    */
 }

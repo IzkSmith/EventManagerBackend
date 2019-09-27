@@ -1,4 +1,4 @@
-package ru.pflb.eventmanager.controller;
+package ru.pflb.eventmanager.rest.controller;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import org.springframework.data.domain.Page;

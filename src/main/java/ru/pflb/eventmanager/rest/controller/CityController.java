@@ -1,4 +1,4 @@
-package ru.pflb.eventmanager.controller;
+package ru.pflb.eventmanager.rest.controller;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import org.springframework.data.domain.Page;
@@ -13,37 +13,38 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import ru.pflb.eventmanager.dto.EventDto;
-import ru.pflb.eventmanager.service.EventService;
+import ru.pflb.eventmanager.dto.CityDto;
+import ru.pflb.eventmanager.service.CityService;
 import ru.pflb.eventmanager.transfer.Validation;
 
 @RestController
-@RequestMapping("/event")
-public class EventController {
-    private final EventService service;
+@RequestMapping("/city")
+public class CityController {
 
-    public EventController(EventService service) {
+    private final CityService service;
+
+    public CityController(CityService service) {
         this.service = service;
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<EventDto> get(@PathVariable Long id) {
+    public ResponseEntity<CityDto> get(@PathVariable Long id) {
         return ResponseEntity.ok(service.get(id));
     }
 
-    @GetMapping("/events")
-    public ResponseEntity<Page<EventDto>> getAll(Pageable pageable) {
+    @GetMapping("/cities")
+     public ResponseEntity<Page<CityDto>> getAll(Pageable pageable) {
         return ResponseEntity.ok(service.getAll(pageable));
     }
 
     @PostMapping
-    public ResponseEntity<EventDto> create(@Validated(value = Validation.New.class) @RequestBody EventDto dto)
+    public ResponseEntity<CityDto> create(@Validated(value = Validation.New.class) @RequestBody CityDto dto)
             throws JsonProcessingException {
         return ResponseEntity.ok(service.create(dto));
     }
 
     @PutMapping
-    public ResponseEntity<EventDto> update(@Validated(value = Validation.Exists.class) @RequestBody EventDto dto)
+    public ResponseEntity<CityDto> update(@Validated(value = Validation.Exists.class) @RequestBody CityDto dto)
             throws JsonProcessingException {
         return ResponseEntity.ok(service.update(dto));
     }
@@ -52,4 +53,6 @@ public class EventController {
     public ResponseEntity<Boolean> delete(@PathVariable Long id) {
         return ResponseEntity.ok(service.delete(id));
     }
+
 }
+

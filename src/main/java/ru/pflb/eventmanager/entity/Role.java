@@ -1,5 +1,6 @@
 package ru.pflb.eventmanager.entity;
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -16,22 +17,21 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import java.util.List;
 
-@NoArgsConstructor
-@AllArgsConstructor
-@Getter
-@Setter
-@ToString
+@Data
 @Entity
 public class Role extends AbstractEntity{
 
     @Column(name = "name", unique = true)
     private String name;
-    @Access(AccessType.FIELD)
-    @ManyToMany(cascade = {CascadeType.DETACH},targetEntity=User.class,fetch= FetchType.LAZY)
-    @JoinTable(name = "user_role",
-            joinColumns = @JoinColumn(name = "role_id"),
-            inverseJoinColumns = @JoinColumn(name = "user_id")
-    )
+
+    @ManyToMany(mappedBy = "roles")
     private List<User> users;
+
+    @Override
+    public String toString() {
+        return "Role{" +
+                "id: " + super.getId() + ", " +
+                "name: " + name + "}";
+    }
 
 }
