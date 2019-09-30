@@ -14,8 +14,6 @@ import ru.pflb.eventmanager.security.jwt.JwtTokenProvider;
 /**
  * Security configuration class for JWT based Spring Security application.
  *
- * @author Eugene Suleimanov
- * @version 1.0
  */
 
 @Configuration
@@ -53,8 +51,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .anyRequest().authenticated()
                 .and()
                 .apply(new JwtConfigurer(jwtTokenProvider));
-
-        //h2-console access
+/*
+        //h2-console access (and other things too)
         String path = this.console.getPath();
         String antPattern = (path.endsWith("/") ? path + "**" : path + "/**");
         HttpSecurity h2Console = http.antMatcher(antPattern);
@@ -62,6 +60,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         h2Console.httpBasic();
         h2Console.headers().frameOptions().sameOrigin();
         http.authorizeRequests().anyRequest().permitAll();
+        */
     }
 }
 

@@ -4,11 +4,6 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.authentication.BadCredentialsException;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.AuthenticationException;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -20,13 +15,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import ru.pflb.eventmanager.dto.UserDto;
-import ru.pflb.eventmanager.entity.User;
 import ru.pflb.eventmanager.security.jwt.JwtTokenProvider;
 import ru.pflb.eventmanager.service.UserService;
 import ru.pflb.eventmanager.transfer.Validation;
 
-import java.util.HashMap;
-import java.util.Map;
 
 @CrossOrigin
 @RestController

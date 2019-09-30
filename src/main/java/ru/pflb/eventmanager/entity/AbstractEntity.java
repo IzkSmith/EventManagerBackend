@@ -1,7 +1,6 @@
 package ru.pflb.eventmanager.entity;
 
 import lombok.Data;
-import lombok.Setter;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 
