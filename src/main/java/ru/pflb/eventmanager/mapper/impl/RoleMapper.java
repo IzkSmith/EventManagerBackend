@@ -9,4 +9,5 @@ import ru.pflb.eventmanager.mapper.Mapper;
 @Component
 @Mapper(entity = Role.class, dto = RoleDto.class)
 public class RoleMapper extends AbstractMapper<Role, RoleDto> {
+
 }

@@ -8,14 +8,14 @@ import ru.pflb.eventmanager.transfer.Validation;
 
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Null;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 @EqualsAndHashCode(callSuper = true)
 @Data
 public class UserDto extends AbstractDto {
-
     @NotNull(groups = {Validation.New.class, Validation.Login.class})
-    @Null(groups = {Validation.Exists.class})
     private String username;
 
     @NotNull(groups = {Validation.New.class, Validation.Login.class})
@@ -25,9 +25,9 @@ public class UserDto extends AbstractDto {
     private String email;
 
     @NotNull(groups = {Validation.New.class})
-    private List<Event> events;
+    private List<Long> eventsId = new ArrayList<>();
 
     @NotNull(groups = {Validation.New.class})
-    private List<Role> roles;
+    private List<Long> roles = new ArrayList<>();
 
 }

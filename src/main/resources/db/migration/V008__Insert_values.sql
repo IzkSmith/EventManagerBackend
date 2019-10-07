@@ -21,3 +21,16 @@ VALUES
        (1,1),
        (2,2),
        (3,3);
+
+INSERT INTO EVENT (id, date,description,max_members, name, city_id)
+VALUES
+(1, '2012-09-17 18:47:52.69', 'We will be glad to see you on our amazing event!', 1000, 'Christmas celebrating event', 1),
+(2,'2017-09-17 18:47:52.69' , 'There will be a concert.', 500, 'Concert', 2),
+(3, '2015-09-17 18:47:52.69', 'Everyone invited to join us in the upcoming event!', 2000, 'Family day in the park',3);
+
+INSERT INTO USER_EVENT (user_id, event_id)
+VALUES
+(1,1),
+(2,2),
+(3,3);
+

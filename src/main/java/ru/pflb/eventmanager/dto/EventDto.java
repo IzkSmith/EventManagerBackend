@@ -7,6 +7,7 @@ import ru.pflb.eventmanager.entity.User;
 import ru.pflb.eventmanager.transfer.Validation;
 
 import javax.validation.constraints.NotNull;
+import java.util.ArrayList;
 import java.util.List;
 
 @EqualsAndHashCode(callSuper = true)
@@ -17,7 +18,7 @@ public class EventDto extends AbstractDto {
     private String name;
 
     @NotNull(groups = {Validation.New.class})
-    private City city;
+    private Long cityId;
 
     @NotNull(groups = {Validation.New.class})
     private String date;
@@ -28,6 +29,5 @@ public class EventDto extends AbstractDto {
     @NotNull(groups = {Validation.New.class})
     private String description;
 
-    @NotNull(groups = {Validation.New.class})
-    private List<User> users;
+    private List<UserDto> users = new ArrayList<>();
 }

@@ -51,7 +51,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .anyRequest().authenticated()
                 .and()
                 .apply(new JwtConfigurer(jwtTokenProvider));
-/*
+
         //h2-console access (and other things too)
         String path = this.console.getPath();
         String antPattern = (path.endsWith("/") ? path + "**" : path + "/**");
@@ -60,7 +60,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         h2Console.httpBasic();
         h2Console.headers().frameOptions().sameOrigin();
         http.authorizeRequests().anyRequest().permitAll();
-        */
+
+
     }
 }
 
