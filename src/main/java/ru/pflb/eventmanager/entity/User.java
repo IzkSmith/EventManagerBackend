@@ -12,6 +12,7 @@ import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
@@ -31,13 +32,13 @@ public class User extends AbstractEntity {
     private String email;
 
     @ManyToMany(mappedBy = "users")
-    private List<Event> events;
+    private List<Event> events = new ArrayList<>();
 
     @ManyToMany(fetch= FetchType.EAGER)
     @JoinTable(name = "user_role",
             joinColumns = @JoinColumn(name = "user_id"),
             inverseJoinColumns = @JoinColumn(name = "role_id")
     )
-    private List<Role> roles;
+    private List<Role> roles = new ArrayList<>();
 
 }

@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import ru.pflb.eventmanager.dto.UserDto;
+import ru.pflb.eventmanager.entity.User;
 import ru.pflb.eventmanager.security.jwt.JwtTokenProvider;
 import ru.pflb.eventmanager.service.UserService;
 import ru.pflb.eventmanager.transfer.Validation;
@@ -44,9 +45,9 @@ public class UserController {
     }
 
     @PostMapping
-    public ResponseEntity<UserDto> create(@Validated(value = Validation.New.class) @RequestBody UserDto dto)
+    public ResponseEntity<User> register(@Validated(value = Validation.New.class) @RequestBody User dto)
             throws JsonProcessingException {
-        return ResponseEntity.ok(userService.create(dto));
+        return ResponseEntity.ok(userService.register(dto));
     }
 
     @PutMapping
