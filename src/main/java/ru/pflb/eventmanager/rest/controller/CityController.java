@@ -18,9 +18,9 @@ import ru.pflb.eventmanager.dto.CityDto;
 import ru.pflb.eventmanager.service.CityService;
 import ru.pflb.eventmanager.transfer.Validation;
 
-@CrossOrigin
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
-@RequestMapping("/city")
+@RequestMapping("/api/v1/city")
 public class CityController {
 
     private final CityService service;

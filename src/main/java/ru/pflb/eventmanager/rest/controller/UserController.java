@@ -16,21 +16,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import ru.pflb.eventmanager.dto.UserDto;
 import ru.pflb.eventmanager.entity.User;
-import ru.pflb.eventmanager.security.jwt.JwtTokenProvider;
 import ru.pflb.eventmanager.service.UserService;
 import ru.pflb.eventmanager.transfer.Validation;
 
 
-@CrossOrigin
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
-@RequestMapping("/user")
+@RequestMapping("/api/v1/user")
 public class UserController {
-
-    private final JwtTokenProvider jwtTokenProvider;
     private final UserService userService;
 
-    public UserController( JwtTokenProvider jwtTokenProvider, UserService service) {
-        this.jwtTokenProvider = jwtTokenProvider;
+    public UserController( UserService service) {
         this.userService = service;
     }
 
@@ -45,8 +41,7 @@ public class UserController {
     }
 
     @PostMapping
-    public ResponseEntity<User> register(@Validated(value = Validation.New.class) @RequestBody User dto)
-            throws JsonProcessingException {
+    public ResponseEntity<User> register(@Validated(value = Validation.New.class) @RequestBody User dto) {
         return ResponseEntity.ok(userService.register(dto));
     }
 
@@ -60,6 +55,5 @@ public class UserController {
     public ResponseEntity<Boolean> delete(@PathVariable Long id) {
         return ResponseEntity.ok(userService.delete(id));
     }
-
 
 }

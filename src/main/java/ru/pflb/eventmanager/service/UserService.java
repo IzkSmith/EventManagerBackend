@@ -18,8 +18,6 @@ public interface UserService {
 
     UserDto get(Long id);
 
-    UserDto getByCredentials(String username, String login);
-
     Page<UserDto> getAll(Pageable pageable);
 
     boolean delete(Long id);

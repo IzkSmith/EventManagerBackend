@@ -14,7 +14,6 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -30,9 +29,6 @@ public class User extends AbstractEntity {
     private String password;
     @Column(name = "email", unique = true)
     private String email;
-
-    @ManyToMany(mappedBy = "users")
-    private List<Event> events = new ArrayList<>();
 
     @ManyToMany(fetch= FetchType.EAGER)
     @JoinTable(name = "user_role",

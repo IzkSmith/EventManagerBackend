@@ -18,9 +18,9 @@ import ru.pflb.eventmanager.dto.RoleDto;
 import ru.pflb.eventmanager.service.RoleService;
 import ru.pflb.eventmanager.transfer.Validation;
 
-@CrossOrigin
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
-@RequestMapping("/role")
+@RequestMapping("/api/v1/role")
 public class RoleController {
 
     private final RoleService service;

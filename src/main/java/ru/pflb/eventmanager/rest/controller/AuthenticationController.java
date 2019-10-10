@@ -13,14 +13,17 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import ru.pflb.eventmanager.dto.AuthenticationRequestDto;
+import ru.pflb.eventmanager.entity.Role;
 import ru.pflb.eventmanager.entity.User;
 import ru.pflb.eventmanager.security.jwt.JwtTokenProvider;
 import ru.pflb.eventmanager.service.UserService;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
-@CrossOrigin
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
 @RequestMapping(value = "/api/v1/auth/")
 public class AuthenticationController {
@@ -51,9 +54,17 @@ public class AuthenticationController {
 
             String token = jwtTokenProvider.createToken(username, user.getRoles());
 
+            List<Long> roles= user.getRoles().stream().map(Role::getId).collect(Collectors.toList());
+            roles.add(new Long(3));
+            if(roles.contains(new Long (1))) {
+                roles.add(new Long(2));
+            }
+
+
             Map<Object, Object> response = new HashMap<>();
             response.put("username", username);
             response.put("token", token);
+            response.put("roles", roles);
 
             return ResponseEntity.ok(response);
         } catch (AuthenticationException e) {

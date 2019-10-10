@@ -9,33 +9,26 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import ru.pflb.eventmanager.dto.UserDto;
-import ru.pflb.eventmanager.entity.Role;
 import ru.pflb.eventmanager.entity.Status;
 import ru.pflb.eventmanager.entity.User;
 import ru.pflb.eventmanager.exception.DataBaseException;
 import ru.pflb.eventmanager.mapper.impl.UserMapper;
-import ru.pflb.eventmanager.repository.RoleRepository;
 import ru.pflb.eventmanager.repository.UserRepository;
 import ru.pflb.eventmanager.service.UserService;
-
-import java.util.ArrayList;
-import java.util.List;
 import java.util.stream.Collectors;
 
 @Slf4j
 @Service
 public class UserServiceImpl implements UserService {
 
-    private final UserRepository userRepository;
-    private final RoleRepository roleRepository;
+    private final UserRepository userRepository;;
     private final UserMapper mapper;
     private final BCryptPasswordEncoder passwordEncoder;
 
-    public UserServiceImpl(UserRepository userRepository, UserMapper mapper, RoleRepository roleRepository, BCryptPasswordEncoder passwordEncoder) {
+    public UserServiceImpl(UserRepository userRepository, UserMapper mapper, BCryptPasswordEncoder passwordEncoder) {
         this.userRepository = userRepository;
         this.mapper = mapper;
         this.passwordEncoder = passwordEncoder;
-        this.roleRepository = roleRepository;
     }
 
     @Override
@@ -78,12 +71,6 @@ public class UserServiceImpl implements UserService {
     public UserDto get(Long id){
         return mapper.toDto(userRepository.findById(id)
                 .orElseThrow(() -> new DataBaseException(String.format("Пользователь с ID %d не существует.", id))));
-    }
-
-    @Override
-    public UserDto getByCredentials(String username, String password) {
-        return mapper.toDto(userRepository.getByUsernameAndPassword(username, password)
-                .orElseThrow(() -> new DataBaseException("Неправильная пара логин-пароль.")));
     }
 
     @Override

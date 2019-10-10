@@ -18,9 +18,9 @@ import ru.pflb.eventmanager.dto.EventDto;
 import ru.pflb.eventmanager.service.EventService;
 import ru.pflb.eventmanager.transfer.Validation;
 
-@CrossOrigin
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
-@RequestMapping("/event")
+@RequestMapping("/api/v1/event")
 public class EventController {
     private final EventService service;
 
