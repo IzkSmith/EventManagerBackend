@@ -1645,8 +1645,8 @@ insert into city values (1,'MOSCOW') [21002-199]
 	at org.h2.server.web.WebApp.processRequest(WebApp.java:169)
 	at org.h2.server.web.WebServlet.doGet(WebServlet.java:121)
 	at org.h2.server.web.WebServlet.doPost(WebServlet.java:158)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at javax.servlet.http.HttpServlet.eventService(HttpServlet.java:660)
+	at javax.servlet.http.HttpServlet.eventService(HttpServlet.java:741)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
@@ -1709,8 +1709,8 @@ insert into city values (1,'MOSCOW') [21002-199]
 	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
 	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
 	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.catalina.connector.CoyoteAdapter.eventService(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.eventService(Http11Processor.java:408)
 	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
 	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
 	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
@@ -1744,8 +1744,8 @@ insert into city values (1,'MOSCOW',2,2,2) -- (1, 'MOSCOW', 2, 2, 2) [22007-199]
 	at org.h2.server.web.WebApp.processRequest(WebApp.java:169)
 	at org.h2.server.web.WebServlet.doGet(WebServlet.java:121)
 	at org.h2.server.web.WebServlet.doPost(WebServlet.java:158)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at javax.servlet.http.HttpServlet.eventService(HttpServlet.java:660)
+	at javax.servlet.http.HttpServlet.eventService(HttpServlet.java:741)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
@@ -1808,8 +1808,8 @@ insert into city values (1,'MOSCOW',2,2,2) -- (1, 'MOSCOW', 2, 2, 2) [22007-199]
 	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
 	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
 	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.catalina.connector.CoyoteAdapter.eventService(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.eventService(Http11Processor.java:408)
 	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
 	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
 	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
@@ -1845,8 +1845,8 @@ Wrong user name or password [28000-199]
 	at org.h2.server.web.WebApp.processRequest(WebApp.java:169)
 	at org.h2.server.web.WebServlet.doGet(WebServlet.java:121)
 	at org.h2.server.web.WebServlet.doPost(WebServlet.java:158)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at javax.servlet.http.HttpServlet.eventService(HttpServlet.java:660)
+	at javax.servlet.http.HttpServlet.eventService(HttpServlet.java:741)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
@@ -1909,8 +1909,8 @@ Wrong user name or password [28000-199]
 	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
 	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
 	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.catalina.connector.CoyoteAdapter.eventService(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.eventService(Http11Processor.java:408)
 	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
 	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
 	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
@@ -1961,13 +1961,13 @@ General error: "java.lang.IllegalStateException: The file is locked: nio:D:/Codi
 	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68)
 	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35)
 	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:94)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.eventService.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.eventService.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237)
+	at org.hibernate.eventService.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
 	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:152)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.eventService.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286)
+	at org.hibernate.eventService.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243)
+	at org.hibernate.eventService.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
 	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:179)
 	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:119)
 	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:904)
@@ -2168,8 +2168,8 @@ Wrong user name or password [28000-199]
 	at org.h2.server.web.WebApp.processRequest(WebApp.java:169)
 	at org.h2.server.web.WebServlet.doGet(WebServlet.java:121)
 	at org.h2.server.web.WebServlet.doPost(WebServlet.java:158)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at javax.servlet.http.HttpServlet.eventService(HttpServlet.java:660)
+	at javax.servlet.http.HttpServlet.eventService(HttpServlet.java:741)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
@@ -2232,8 +2232,8 @@ Wrong user name or password [28000-199]
 	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
 	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
 	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.catalina.connector.CoyoteAdapter.eventService(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.eventService(Http11Processor.java:408)
 	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
 	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
 	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
@@ -2284,13 +2284,13 @@ General error: "java.lang.IllegalStateException: The file is locked: nio:D:/Codi
 	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68)
 	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35)
 	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:94)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.eventService.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.eventService.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237)
+	at org.hibernate.eventService.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
 	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:152)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.eventService.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286)
+	at org.hibernate.eventService.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243)
+	at org.hibernate.eventService.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
 	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:179)
 	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:119)
 	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:904)
@@ -2444,13 +2444,13 @@ General error: "java.lang.IllegalStateException: The file is locked: nio:D:/Codi
 	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68)
 	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35)
 	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:94)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.eventService.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.eventService.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237)
+	at org.hibernate.eventService.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
 	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:152)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.eventService.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286)
+	at org.hibernate.eventService.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243)
+	at org.hibernate.eventService.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
 	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:179)
 	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:119)
 	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:904)
@@ -2604,13 +2604,13 @@ General error: "java.lang.IllegalStateException: The file is locked: nio:D:/Codi
 	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68)
 	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35)
 	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:94)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.eventService.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.eventService.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237)
+	at org.hibernate.eventService.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
 	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:152)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.eventService.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286)
+	at org.hibernate.eventService.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243)
+	at org.hibernate.eventService.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
 	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:179)
 	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:119)
 	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:904)
@@ -2727,3 +2727,1572 @@ Caused by: java.lang.IllegalStateException: The file is locked: nio:D:/Coding/jo
 	at org.h2.mvstore.FileStore.open(FileStore.java:172)
 	at org.h2.mvstore.MVStore.<init>(MVStore.java:390)
 	... 60 more
+2019-10-10 13:11:06 database: flush
+org.h2.message.DbException: Внутренняя ошибка: "java.lang.IllegalStateException: The file is locked: nio:D:/Coding/job/emulator/eventmanager/target/foobar.mv.db [1.4.199/7]"
+General error: "java.lang.IllegalStateException: The file is locked: nio:D:/Coding/job/emulator/eventmanager/target/foobar.mv.db [1.4.199/7]" [50000-199]
+	at org.h2.message.DbException.get(DbException.java:194)
+	at org.h2.message.DbException.convert(DbException.java:347)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:90)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2787)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:441)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:404)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:3343)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:162)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:95)
+	at org.h2.engine.Database.getPageStore(Database.java:2739)
+	at org.h2.engine.Database.open(Database.java:769)
+	at org.h2.engine.Database.openDatabase(Database.java:319)
+	at org.h2.engine.Database.<init>(Database.java:313)
+	at org.h2.engine.Engine.openSession(Engine.java:69)
+	at org.h2.engine.Engine.openSession(Engine.java:201)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:178)
+	at org.h2.engine.Engine.createSession(Engine.java:161)
+	at org.h2.engine.Engine.createSession(Engine.java:31)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:336)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:169)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:148)
+	at org.h2.Driver.connect(Driver.java:69)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:136)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:369)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:198)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:467)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:541)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:94)
+	at org.hibernate.eventService.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.eventService.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237)
+	at org.hibernate.eventService.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:152)
+	at org.hibernate.eventService.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286)
+	at org.hibernate.eventService.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243)
+	at org.hibernate.eventService.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:179)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:119)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:904)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:935)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:57)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:377)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1837)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1774)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1105)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:744)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:391)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:120)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.junit.runners.Suite.runChild(Suite.java:128)
+	at org.junit.runners.Suite.runChild(Suite.java:27)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Внутренняя ошибка: "java.lang.IllegalStateException: The file is locked: nio:D:/Coding/job/emulator/eventmanager/target/foobar.mv.db [1.4.199/7]"
+General error: "java.lang.IllegalStateException: The file is locked: nio:D:/Coding/job/emulator/eventmanager/target/foobar.mv.db [1.4.199/7]" [50000-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	... 99 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:D:/Coding/job/emulator/eventmanager/target/foobar.mv.db [1.4.199/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:883)
+	at org.h2.mvstore.FileStore.open(FileStore.java:172)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:390)
+	... 93 more
+2019-10-10 13:11:08 database: flush
+org.h2.message.DbException: Внутренняя ошибка: "java.lang.IllegalStateException: The file is locked: nio:D:/Coding/job/emulator/eventmanager/target/foobar.mv.db [1.4.199/7]"
+General error: "java.lang.IllegalStateException: The file is locked: nio:D:/Coding/job/emulator/eventmanager/target/foobar.mv.db [1.4.199/7]" [50000-199]
+	at org.h2.message.DbException.get(DbException.java:194)
+	at org.h2.message.DbException.convert(DbException.java:347)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:90)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2787)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:441)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:404)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:3343)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:162)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:95)
+	at org.h2.engine.Database.getPageStore(Database.java:2739)
+	at org.h2.engine.Database.open(Database.java:769)
+	at org.h2.engine.Database.openDatabase(Database.java:319)
+	at org.h2.engine.Database.<init>(Database.java:313)
+	at org.h2.engine.Engine.openSession(Engine.java:69)
+	at org.h2.engine.Engine.openSession(Engine.java:201)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:178)
+	at org.h2.engine.Engine.createSession(Engine.java:161)
+	at org.h2.engine.Engine.createSession(Engine.java:31)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:336)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:169)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:148)
+	at org.h2.Driver.connect(Driver.java:69)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:136)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:369)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:198)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:467)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:541)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:43)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:60)
+	at org.hibernate.tool.schema.extract.internal.SequenceInformationExtractorH2DatabaseImpl.extractMetadata(SequenceInformationExtractorH2DatabaseImpl.java:35)
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.initializeSequences(DatabaseInformationImpl.java:65)
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.<init>(DatabaseInformationImpl.java:59)
+	at org.hibernate.tool.schema.internal.Helper.buildDatabaseInformation(Helper.java:132)
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.doValidation(AbstractSchemaValidator.java:61)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:191)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:72)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:310)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:467)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:939)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:57)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:377)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1837)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1774)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1105)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:744)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:391)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:120)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.junit.runners.Suite.runChild(Suite.java:128)
+	at org.junit.runners.Suite.runChild(Suite.java:27)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Внутренняя ошибка: "java.lang.IllegalStateException: The file is locked: nio:D:/Coding/job/emulator/eventmanager/target/foobar.mv.db [1.4.199/7]"
+General error: "java.lang.IllegalStateException: The file is locked: nio:D:/Coding/job/emulator/eventmanager/target/foobar.mv.db [1.4.199/7]" [50000-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	... 97 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:D:/Coding/job/emulator/eventmanager/target/foobar.mv.db [1.4.199/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:883)
+	at org.h2.mvstore.FileStore.open(FileStore.java:172)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:390)
+	... 91 more
+2019-10-10 13:12:50 database: flush
+org.h2.message.DbException: Внутренняя ошибка: "java.lang.IllegalStateException: The file is locked: nio:D:/Coding/job/emulator/eventmanager/target/foobar.mv.db [1.4.199/7]"
+General error: "java.lang.IllegalStateException: The file is locked: nio:D:/Coding/job/emulator/eventmanager/target/foobar.mv.db [1.4.199/7]" [50000-199]
+	at org.h2.message.DbException.get(DbException.java:194)
+	at org.h2.message.DbException.convert(DbException.java:347)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:90)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2787)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:441)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:404)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:3343)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:162)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:95)
+	at org.h2.engine.Database.getPageStore(Database.java:2739)
+	at org.h2.engine.Database.open(Database.java:769)
+	at org.h2.engine.Database.openDatabase(Database.java:319)
+	at org.h2.engine.Database.<init>(Database.java:313)
+	at org.h2.engine.Engine.openSession(Engine.java:69)
+	at org.h2.engine.Engine.openSession(Engine.java:201)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:178)
+	at org.h2.engine.Engine.createSession(Engine.java:161)
+	at org.h2.engine.Engine.createSession(Engine.java:31)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:336)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:169)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:148)
+	at org.h2.Driver.connect(Driver.java:69)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:136)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:369)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:198)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:467)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:541)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:94)
+	at org.hibernate.eventService.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.eventService.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237)
+	at org.hibernate.eventService.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:152)
+	at org.hibernate.eventService.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286)
+	at org.hibernate.eventService.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243)
+	at org.hibernate.eventService.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:179)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:119)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:904)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:935)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:57)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:377)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1837)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1774)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1105)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:744)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:391)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:120)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.junit.runners.Suite.runChild(Suite.java:128)
+	at org.junit.runners.Suite.runChild(Suite.java:27)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Внутренняя ошибка: "java.lang.IllegalStateException: The file is locked: nio:D:/Coding/job/emulator/eventmanager/target/foobar.mv.db [1.4.199/7]"
+General error: "java.lang.IllegalStateException: The file is locked: nio:D:/Coding/job/emulator/eventmanager/target/foobar.mv.db [1.4.199/7]" [50000-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	... 99 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:D:/Coding/job/emulator/eventmanager/target/foobar.mv.db [1.4.199/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:883)
+	at org.h2.mvstore.FileStore.open(FileStore.java:172)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:390)
+	... 93 more
+2019-10-10 13:12:52 database: flush
+org.h2.message.DbException: Внутренняя ошибка: "java.lang.IllegalStateException: The file is locked: nio:D:/Coding/job/emulator/eventmanager/target/foobar.mv.db [1.4.199/7]"
+General error: "java.lang.IllegalStateException: The file is locked: nio:D:/Coding/job/emulator/eventmanager/target/foobar.mv.db [1.4.199/7]" [50000-199]
+	at org.h2.message.DbException.get(DbException.java:194)
+	at org.h2.message.DbException.convert(DbException.java:347)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:90)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2787)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:441)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:404)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:3343)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:162)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:95)
+	at org.h2.engine.Database.getPageStore(Database.java:2739)
+	at org.h2.engine.Database.open(Database.java:769)
+	at org.h2.engine.Database.openDatabase(Database.java:319)
+	at org.h2.engine.Database.<init>(Database.java:313)
+	at org.h2.engine.Engine.openSession(Engine.java:69)
+	at org.h2.engine.Engine.openSession(Engine.java:201)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:178)
+	at org.h2.engine.Engine.createSession(Engine.java:161)
+	at org.h2.engine.Engine.createSession(Engine.java:31)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:336)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:169)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:148)
+	at org.h2.Driver.connect(Driver.java:69)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:136)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:369)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:198)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:467)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:541)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:43)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:60)
+	at org.hibernate.tool.schema.extract.internal.SequenceInformationExtractorH2DatabaseImpl.extractMetadata(SequenceInformationExtractorH2DatabaseImpl.java:35)
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.initializeSequences(DatabaseInformationImpl.java:65)
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.<init>(DatabaseInformationImpl.java:59)
+	at org.hibernate.tool.schema.internal.Helper.buildDatabaseInformation(Helper.java:132)
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.doValidation(AbstractSchemaValidator.java:61)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:191)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:72)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:310)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:467)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:939)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:57)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:377)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1837)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1774)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1105)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:744)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:391)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:120)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.junit.runners.Suite.runChild(Suite.java:128)
+	at org.junit.runners.Suite.runChild(Suite.java:27)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Внутренняя ошибка: "java.lang.IllegalStateException: The file is locked: nio:D:/Coding/job/emulator/eventmanager/target/foobar.mv.db [1.4.199/7]"
+General error: "java.lang.IllegalStateException: The file is locked: nio:D:/Coding/job/emulator/eventmanager/target/foobar.mv.db [1.4.199/7]" [50000-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	... 97 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:D:/Coding/job/emulator/eventmanager/target/foobar.mv.db [1.4.199/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:883)
+	at org.h2.mvstore.FileStore.open(FileStore.java:172)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:390)
+	... 91 more
+2019-10-11 13:04:20 database: flush
+org.h2.message.DbException: Внутренняя ошибка: "java.lang.IllegalStateException: The file is locked: nio:D:/Coding/job/emulator/eventmanager/target/foobar.mv.db [1.4.197/7]"
+General error: "java.lang.IllegalStateException: The file is locked: nio:D:/Coding/job/emulator/eventmanager/target/foobar.mv.db [1.4.197/7]" [50000-197]
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.message.DbException.convert(DbException.java:307)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:95)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2506)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:383)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:364)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2934)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:155)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:100)
+	at org.h2.engine.Database.getPageStore(Database.java:2538)
+	at org.h2.engine.Database.open(Database.java:709)
+	at org.h2.engine.Database.openDatabase(Database.java:286)
+	at org.h2.engine.Database.<init>(Database.java:280)
+	at org.h2.engine.Engine.openSession(Engine.java:66)
+	at org.h2.engine.Engine.openSession(Engine.java:179)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:157)
+	at org.h2.engine.Engine.createSession(Engine.java:140)
+	at org.h2.engine.Engine.createSession(Engine.java:28)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:351)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:124)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:103)
+	at org.h2.Driver.connect(Driver.java:69)
+	at org.flywaydb.core.internal.jdbc.DriverDataSource.getConnectionFromDriver(DriverDataSource.java:447)
+	at org.flywaydb.core.internal.jdbc.DriverDataSource.getConnection(DriverDataSource.java:413)
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:56)
+	at org.flywaydb.core.internal.jdbc.JdbcConnectionFactory.<init>(JdbcConnectionFactory.java:80)
+	at org.flywaydb.core.Flyway.execute(Flyway.java:434)
+	at org.flywaydb.core.Flyway.clean(Flyway.java:286)
+	at org.flywaydb.gradle.task.FlywayCleanTask.run(FlywayCleanTask.java:28)
+	at org.flywaydb.gradle.task.AbstractFlywayTask.runTask(AbstractFlywayTask.java:517)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.reflect.JavaMethod.invoke(JavaMethod.java:103)
+	at org.gradle.api.internal.project.taskfactory.StandardTaskAction.doExecute(StandardTaskAction.java:49)
+	at org.gradle.api.internal.project.taskfactory.StandardTaskAction.execute(StandardTaskAction.java:42)
+	at org.gradle.api.internal.project.taskfactory.StandardTaskAction.execute(StandardTaskAction.java:28)
+	at org.gradle.api.internal.AbstractTask$TaskActionWrapper.execute(AbstractTask.java:717)
+	at org.gradle.api.internal.AbstractTask$TaskActionWrapper.execute(AbstractTask.java:684)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter$5.run(ExecuteActionsTaskExecuter.java:476)
+	at org.gradle.internal.operations.DefaultBuildOperationExecutor$RunnableBuildOperationWorker.execute(DefaultBuildOperationExecutor.java:402)
+	at org.gradle.internal.operations.DefaultBuildOperationExecutor$RunnableBuildOperationWorker.execute(DefaultBuildOperationExecutor.java:394)
+	at org.gradle.internal.operations.DefaultBuildOperationExecutor$1.execute(DefaultBuildOperationExecutor.java:165)
+	at org.gradle.internal.operations.DefaultBuildOperationExecutor.execute(DefaultBuildOperationExecutor.java:250)
+	at org.gradle.internal.operations.DefaultBuildOperationExecutor.execute(DefaultBuildOperationExecutor.java:158)
+	at org.gradle.internal.operations.DefaultBuildOperationExecutor.run(DefaultBuildOperationExecutor.java:92)
+	at org.gradle.internal.operations.DelegatingBuildOperationExecutor.run(DelegatingBuildOperationExecutor.java:31)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeAction(ExecuteActionsTaskExecuter.java:461)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeActions(ExecuteActionsTaskExecuter.java:444)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.access$200(ExecuteActionsTaskExecuter.java:93)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter$TaskExecution.execute(ExecuteActionsTaskExecuter.java:237)
+	at org.gradle.internal.execution.steps.ExecuteStep.lambda$execute$1(ExecuteStep.java:33)
+	at java.util.Optional.orElseGet(Optional.java:267)
+	at org.gradle.internal.execution.steps.ExecuteStep.execute(ExecuteStep.java:33)
+	at org.gradle.internal.execution.steps.ExecuteStep.execute(ExecuteStep.java:26)
+	at org.gradle.internal.execution.steps.CleanupOutputsStep.execute(CleanupOutputsStep.java:58)
+	at org.gradle.internal.execution.steps.CleanupOutputsStep.execute(CleanupOutputsStep.java:35)
+	at org.gradle.internal.execution.steps.ResolveInputChangesStep.execute(ResolveInputChangesStep.java:48)
+	at org.gradle.internal.execution.steps.ResolveInputChangesStep.execute(ResolveInputChangesStep.java:33)
+	at org.gradle.internal.execution.steps.CancelExecutionStep.execute(CancelExecutionStep.java:39)
+	at org.gradle.internal.execution.steps.TimeoutStep.executeWithoutTimeout(TimeoutStep.java:73)
+	at org.gradle.internal.execution.steps.TimeoutStep.execute(TimeoutStep.java:54)
+	at org.gradle.internal.execution.steps.CatchExceptionStep.execute(CatchExceptionStep.java:35)
+	at org.gradle.internal.execution.steps.CreateOutputsStep.execute(CreateOutputsStep.java:51)
+	at org.gradle.internal.execution.steps.SnapshotOutputsStep.execute(SnapshotOutputsStep.java:45)
+	at org.gradle.internal.execution.steps.SnapshotOutputsStep.execute(SnapshotOutputsStep.java:31)
+	at org.gradle.internal.execution.steps.CacheStep.executeWithoutCache(CacheStep.java:208)
+	at org.gradle.internal.execution.steps.CacheStep.execute(CacheStep.java:70)
+	at org.gradle.internal.execution.steps.CacheStep.execute(CacheStep.java:45)
+	at org.gradle.internal.execution.steps.BroadcastChangingOutputsStep.execute(BroadcastChangingOutputsStep.java:49)
+	at org.gradle.internal.execution.steps.StoreSnapshotsStep.execute(StoreSnapshotsStep.java:43)
+	at org.gradle.internal.execution.steps.StoreSnapshotsStep.execute(StoreSnapshotsStep.java:32)
+	at org.gradle.internal.execution.steps.RecordOutputsStep.execute(RecordOutputsStep.java:38)
+	at org.gradle.internal.execution.steps.RecordOutputsStep.execute(RecordOutputsStep.java:24)
+	at org.gradle.internal.execution.steps.SkipUpToDateStep.executeBecause(SkipUpToDateStep.java:96)
+	at org.gradle.internal.execution.steps.SkipUpToDateStep.lambda$execute$0(SkipUpToDateStep.java:89)
+	at java.util.Optional.map(Optional.java:215)
+	at org.gradle.internal.execution.steps.SkipUpToDateStep.execute(SkipUpToDateStep.java:54)
+	at org.gradle.internal.execution.steps.SkipUpToDateStep.execute(SkipUpToDateStep.java:38)
+	at org.gradle.internal.execution.steps.ResolveChangesStep.execute(ResolveChangesStep.java:76)
+	at org.gradle.internal.execution.steps.ResolveChangesStep.execute(ResolveChangesStep.java:37)
+	at org.gradle.internal.execution.steps.legacy.MarkSnapshottingInputsFinishedStep.execute(MarkSnapshottingInputsFinishedStep.java:36)
+	at org.gradle.internal.execution.steps.legacy.MarkSnapshottingInputsFinishedStep.execute(MarkSnapshottingInputsFinishedStep.java:26)
+	at org.gradle.internal.execution.steps.ResolveCachingStateStep.execute(ResolveCachingStateStep.java:90)
+	at org.gradle.internal.execution.steps.ResolveCachingStateStep.execute(ResolveCachingStateStep.java:48)
+	at org.gradle.internal.execution.steps.CaptureStateBeforeExecutionStep.execute(CaptureStateBeforeExecutionStep.java:69)
+	at org.gradle.internal.execution.steps.CaptureStateBeforeExecutionStep.execute(CaptureStateBeforeExecutionStep.java:47)
+	at org.gradle.internal.execution.impl.DefaultWorkExecutor.execute(DefaultWorkExecutor.java:33)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.execute(ExecuteActionsTaskExecuter.java:140)
+	at org.gradle.api.internal.tasks.execution.ValidatingTaskExecuter.execute(ValidatingTaskExecuter.java:62)
+	at org.gradle.api.internal.tasks.execution.SkipEmptySourceFilesTaskExecuter.execute(SkipEmptySourceFilesTaskExecuter.java:108)
+	at org.gradle.api.internal.tasks.execution.ResolveBeforeExecutionOutputsTaskExecuter.execute(ResolveBeforeExecutionOutputsTaskExecuter.java:67)
+	at org.gradle.api.internal.tasks.execution.ResolveAfterPreviousExecutionStateTaskExecuter.execute(ResolveAfterPreviousExecutionStateTaskExecuter.java:46)
+	at org.gradle.api.internal.tasks.execution.CleanupStaleOutputsExecuter.execute(CleanupStaleOutputsExecuter.java:94)
+	at org.gradle.api.internal.tasks.execution.FinalizePropertiesTaskExecuter.execute(FinalizePropertiesTaskExecuter.java:46)
+	at org.gradle.api.internal.tasks.execution.ResolveTaskExecutionModeExecuter.execute(ResolveTaskExecutionModeExecuter.java:95)
+	at org.gradle.api.internal.tasks.execution.SkipTaskWithNoActionsExecuter.execute(SkipTaskWithNoActionsExecuter.java:57)
+	at org.gradle.api.internal.tasks.execution.SkipOnlyIfTaskExecuter.execute(SkipOnlyIfTaskExecuter.java:56)
+	at org.gradle.api.internal.tasks.execution.CatchExceptionTaskExecuter.execute(CatchExceptionTaskExecuter.java:36)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.executeTask(EventFiringTaskExecuter.java:77)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:55)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:52)
+	at org.gradle.internal.operations.DefaultBuildOperationExecutor$CallableBuildOperationWorker.execute(DefaultBuildOperationExecutor.java:416)
+	at org.gradle.internal.operations.DefaultBuildOperationExecutor$CallableBuildOperationWorker.execute(DefaultBuildOperationExecutor.java:406)
+	at org.gradle.internal.operations.DefaultBuildOperationExecutor$1.execute(DefaultBuildOperationExecutor.java:165)
+	at org.gradle.internal.operations.DefaultBuildOperationExecutor.execute(DefaultBuildOperationExecutor.java:250)
+	at org.gradle.internal.operations.DefaultBuildOperationExecutor.execute(DefaultBuildOperationExecutor.java:158)
+	at org.gradle.internal.operations.DefaultBuildOperationExecutor.call(DefaultBuildOperationExecutor.java:102)
+	at org.gradle.internal.operations.DelegatingBuildOperationExecutor.call(DelegatingBuildOperationExecutor.java:36)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter.execute(EventFiringTaskExecuter.java:52)
+	at org.gradle.execution.plan.LocalTaskNodeExecutor.execute(LocalTaskNodeExecutor.java:43)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:355)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:343)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:336)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:322)
+	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker$1.execute(DefaultPlanExecutor.java:134)
+	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker$1.execute(DefaultPlanExecutor.java:129)
+	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.execute(DefaultPlanExecutor.java:202)
+	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.executeNextNode(DefaultPlanExecutor.java:193)
+	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.run(DefaultPlanExecutor.java:129)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:48)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.h2.jdbc.JdbcSQLException: Внутренняя ошибка: "java.lang.IllegalStateException: The file is locked: nio:D:/Coding/job/emulator/eventmanager/target/foobar.mv.db [1.4.197/7]"
+General error: "java.lang.IllegalStateException: The file is locked: nio:D:/Coding/job/emulator/eventmanager/target/foobar.mv.db [1.4.197/7]" [50000-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	... 127 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:D:/Coding/job/emulator/eventmanager/target/foobar.mv.db [1.4.197/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:870)
+	at org.h2.mvstore.FileStore.open(FileStore.java:173)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:350)
+	... 121 more
+2019-10-14 17:07:24 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Значение слишком длинное для поля "DESCRIPTION VARCHAR(255) NOT NULL": "STRINGDECODE('The exhibition \u201cThe Alexei Morozov Collection: Porcelain, Ceramics, Glass will open in the Grand Stone Greenh... (547)"
+Value too long for column "DESCRIPTION VARCHAR(255) NOT NULL": "STRINGDECODE('The exhibition \u201cThe Alexei Morozov Collection: Porcelain, Ceramics, Glass will open in the Grand Stone Greenh... (547)"; SQL statement:
+INSERT INTO EVENT (id, date, name, max_members, description, city_id)
+VALUES
+(1, '2019-11-1 10:30',
+ 'The Alexei Morozov collection: Porcelain, ceramics and glass at Kuskovo Museum Estate',
+ 1000,
+ 'The exhibition “The Alexei Morozov Collection: Porcelain, Ceramics, Glass will open in the Grand Stone Greenhouse' ||
+ ' at the Kuskovo Museum Estate For the first time, most of the porcelain collection that belonged to Alexei Morozov' ||
+ ' (1857–1934) – Russian porcelain, ceramics and glass – will be exhibited. This will include the main part of the' ||
+ ' collections of the State Museum of Ceramics that was moved to the Kuskovo Museum Estate in 1932. In the ' ||
+ '1920s–1930s, other private collections were added, but Alexei Morozov’s collection remains the largest.', 1),
+
+(2,'2019-10-2 15:00' ,
+ '‘Lagrange Streets’ in the Lumière Brothers Photography Centre',
+ 500,
+ 'The Lumière Brothers Photography Centre opens a new season with an anniversary Vladimir Lagrange exhibition.' ||
+ ' Pictures by this Soviet and Russian photographer have become a symbol of the Thaw of the 1960s. In these classic' ||
+ ' Soviet art works, Vladimir Lagrange showed the life of ordinary people. He had a gift to feel the atmosphere of' ||
+ ' a particular time.', 2),
+
+(3, '2019-12-3 18:00',
+ 'Jewellery Craftsmanship. Traditions and Modernity at the New Manege',
+ 2000,
+ '9 to 20 October, the New Manege will run an exhibition of jewellery and decorative arts Jewellery Craftsmanship.' ||
+ ' Traditions and Modernity. Three halls will host a display telling about the development of Russian jewellery for' ||
+ ' three centuries — from the 18th century to the present day. ',3),
+
+(4, '2019-11-4 10:30',
+ '''Moscow Theatres, Golden Mask Award Winners'' on Chistoprudny Boulevard!',
+ 1000,
+ 'The photo exhibition ''Moscow Theatres, Golden Mask Award Winners'' will open on Chistoprudny Boulevard featuring' ||
+ ' photos by Alexander Ivanishin.
+
+He captured a backstage life of the Moscow theatres. You will see rehearsals captured at the Chekhov Moscow Art' ||
+ ' Theatre, the Pyotr Fomenko Workshop, the Shadow Theatre, the Stanislavsky and Nemirovich-Danchenko Music Theatre' ||
+ ' and many others.', 4),
+
+(5,'2019-10-5 15:00' ,
+ 'Ceramics Exhibition in Tsaritsyno Museum Reserve',
+ 500,
+ 'Small Palace of Tsaritsyno Museum Reserve is running the exhibition ''Shadow of a Woman'' as part of the Ceramics' ||
+ ' in Tsaritsyno project.
+
+This ceramic art exhibition presents the collection of sculptures, figurines and decorative compositions made by' ||
+ ' Soviet artists of the 1960s–1980s.', 5),
+
+(6, '2019-12-6 18:00',
+ 'Historical tour of the Helikon Opera Theatre',
+ 2000,
+ 'Helikon Opera Moscow Music Theatre invites to join a historical tour.
+
+You will discover the history of the building and its state rooms, see today’s theatre centre, the old Belokolonny' ||
+ ' Hall of Princess Shakhovskaya, listen to a story about the famous theatre groups, and visit a unique exhibition' ||
+ ' at Zimin Lobby and Gallery.
+
+Also, visitors will view new Stravinsky theatre hall. Free admission.',6),
+
+(7, '2019-11-7 10:30',
+ '''Life Is a Long Run'' at Alexander Shilov Gallery',
+ 1000,
+ 'Alexander Shilov Gallery will host an exhibition ''Life Is a Long Run'' about the Russian peasantry.
+
+Visitors will see the paintings ''Master of the Earth'', ''Getting Cold'', ''Waiting'', ''Fate'' and others. The' ||
+ ' artist seeks to understand the Russian character and capture life in authentic and realistic manner.
+
+Full ticket — RUB 200, discount ticket — RUB 80.', 7),
+
+(8,'2019-10-8 15:00' ,
+ '“Iconography and Graphic Image of the Saviour” at Kolomenskoye Museum Reserve',
+ 500,
+ 'Visit the exhibition “Iconography and Graphic Image of the Saviour” at Church of St. George, Kolomenskoye Museum Reserve.
+
+You will see icons and graphics, as well as books from the Museum Reserve’s collection. Each image type of Christ has' ||
+ ' a detailed description.
+
+Religious books have no description of how the Saviour looked like, that is why his image has always been of interest' ||
+ ' for Christians. So at first one of the main image types appeared - the Holy Mandylion, then the Infant Jesus with' ||
+ ' Holy Virgin, Christ Emmanuel, Christ Pantocrator.', 8),
+
+(9, '2019-12-9 18:00',
+ '''Snow Policy'' exhibition in Tsaritsyno Museum Reserve',
+ 2000,
+ 'Tsaritsyno Museum Reserve invites to attend the exhibition and installation ''Snow Policy'' by the artist Sergei Katran.
+
+The exhibition''s highlight is a fantasy about the climatic malfunction, which caused unprecedented snowfalls in ' ||
+ 'summer. At the same time, this ''natural disaster'' will be an opportunity to take a fresh look at the Museum''' ||
+ 's building and Sheremetev collection of sculptures from Moscow Ostankino Museum Estate exhibited in its halls.' ||
+ '  It will be accompanied by real media reports about heavy snowfall voiced by soloist of Stanislavsky Electro' ||
+ ' Theatre Alexei Kokhanov.', 9),
+
+(10, '2019-11-10 10:30',
+ '''The World to Come: Ecology as a New Policy. 2030-2100'' at the Garage Museum',
+ 1000,
+ 'Visit the biggest exhibition of 2019, ''The World to Come: Ecology as a New Policy. 2030-2100'', at the Garage' ||
+ ' Museum of Contemporary Art. The display will occupy the entire space of the Museum, with more than 50 artists' ||
+ ' from Russia and other countries presenting their works.', 10),
+
+(11,'2019-10-11 15:00' ,
+ '''Style to Choose. Interiors of Historicism Era'' in Lyublino Museum Estate',
+ 500,
+ 'Pink Hall of Durasov Palace exhibition ''Style to Choose. Interiors of Historicism Era''.
+
+Visitors will learn how the approach to interior decoration changed between the 1830s and the 1890s. The Museum ' ||
+ 'will present the world of things that served as the background for dramatic scenes of literary works by Russian' ||
+ ' and European classics.', 11),
+
+(12, '2019-12-12 18:00',
+ 'Exhibition of Croatian artists at the Museum of Russian Lubok and Naïve Art',
+ 2000,
+ 'The Museum of Russian Lubok and Naïve Art will run the exhibition of Croatian artists, representatives of Hlebine' ||
+ ' school, such as Ivan Generalić, Mijo Kovačić, Ivan Večenaj, Dragan Gaži and Ivan Lacković.', 12),
+
+(13, '2019-11-13 10:30',
+ '''Russian Jordaenses'' at the Pushkin State Museum of Fine Arts',
+ 1000,
+ 'The Pushkin State Museum of Fine Arts will run an exhibition ''Russian Jordaenses''. For the first time, art' ||
+ ' connoisseurs will have an opportunity to view the best works by the Flemish artist Jacob Jordaens, stored in ' ||
+ 'Moscow and regional museums.
+
+Jacob Jordaens was born in 1593. Together with Peter Rubens, he was learning art from the famous Adam van Noort.' ||
+ ' The representatives of Charles I of England, Queen Henrietta Maria of France and the House of Orange-Nassau' ||
+ ' were among his customers.', 13),
+
+(14,'2019-10-14 15:00' ,
+ 'Exhibition of Serge Lido''s ballet photographs at the Multimedia Art Museum',
+ 500,
+ 'Multimedia Art Museum organizes the first Russian exhibition of photographs by Serge Lido, a ballet photographer' ||
+ ' of the mid-20th century. He also shot famous people such as Jean Cocteau, Giorgio de Chirico, Pablo Picasso,' ||
+ ' Edith Piaf, Marcello Mastroianni, Pierre Cardin, Brigitte Bardot, and many others.', 14),
+
+(15, '2019-12-15 18:00',
+ 'Rosemarie Trockel exhibition at the Multimedia Art Museum',
+ 2000,
+ 'Multimedia Art Museum hosts an exhibition of German artist Rosemarie Trockel, who has been struggling with male' ||
+ ' dominance in the arts throughout her career.
+
+Rosemarie Trockel contrasts the figure of a male artist genius with female role models and meanings. In an ironic' ||
+ ' and humorous way, she highlights the prejudices women face in society and the arts.',15),
+
+(16, '2019-11-16 10:30',
+ '''Vladimir Yankilevsky. Monument Heroïque'' at Multimedia Art Museum',
+ 1000,
+ 'Multimedia Art Museum is running the exhibition of Vladimir Yankilevsky, a Soviet artist, one of the participants' ||
+ ' of the famous ''30 Years of MOSKh'' (Moscow Regional Union of Artists), the exhibition sharply criticised by' ||
+ ' Nikita Khrushchev in 1962.', 16),
+
+(17,'2019-10-17 15:00' ,
+ '''Harry Benson. The Beatles and More'' at the Lumière Brothers Photography Centre',
+ 500,
+ 'The Lumière Brothers Photography Centre presents Russia''s first exhibition of photojournalist Harry Benson. He' ||
+ ' captures US presidents, from Dwight Eisenhower to Barack Obama and Donald Trump. But the Beatles pictures made' ||
+ ' Benson really world-famous.', 17),
+
+(18, '2019-12-18 18:00',
+ '''A Journey into a Dream. Watercolour and Silk'' at the exhibition halls in Arbat Street',
+ 2000,
+ 'The State Pushkin Museum is going to be the first in Russia to host an exhibition of Alexandra Otiyeva, a French' ||
+ ' artist born in Russia.
+
+The exhibition includes the best works made in different years. She uses a sophisticated watercolour technique.
+
+',  18),
+
+(19, '2019-11-19 10:30',
+ '''Yevgeny Umnov. Favourites. To the 100th Anniversary of His Birthday'' in Multimedia Art Museum',
+ 1000,
+ 'Multimedia Art Museum is running an exhibition of Soviet photographer Yevgeny Umnov, with photos from the magazine' ||
+ ' Ogonyok and unpublished pictures: ballet photos of the 1950s and 1960s, Maya Plisetskaya, Yuri Levitan, Leonid' ||
+ ' Utesov, Mark Bernes, Iya Savvina, Yelena Koreneva, Alexander Gradsky and other artists.', 19),
+
+(20,'2019-10-20 15:00' ,
+ '''Vertical — Horizontal: Richard Paul Lohse — Vladimir Andreyenkov'' at the Museum of Architecture',
+ 500,
+ 'Shchusev State Museum of Architecture  presents the exhibition ''Vertical — Horizontal: Richard Paul Lohse' ||
+ ' — Vladimir Andreyenkov''.', 20),
+
+(21, '2019-12-21 18:00',
+ '''Proto-signs'' at the 21st Century Gallery',
+ 2000,
+ ' 21st Century Gallery is opening the exhibition ''Proto-signs'' by Nikolai Selivanov.
+
+''Proto-sign'' is a concept to describe an artwork without words. A proto-sign cannot be fully understood, but' ||
+ ' one can only perceive its meaning.', 21) [22001-197]
+2019-10-14 17:10:36 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Значение слишком длинное для поля "DESCRIPTION VARCHAR(255) NOT NULL": "STRINGDECODE('The exhibition \u201cThe Alexei Morozov Collection: Porcelain, Ceramics, Glass will open in the Grand Stone Greenh... (547)"
+Value too long for column "DESCRIPTION VARCHAR(255) NOT NULL": "STRINGDECODE('The exhibition \u201cThe Alexei Morozov Collection: Porcelain, Ceramics, Glass will open in the Grand Stone Greenh... (547)"; SQL statement:
+INSERT INTO EVENT (id, date, name, max_members, description, city_id)
+VALUES
+(1, '2019-11-1 10:30',
+ 'The Alexei Morozov collection: Porcelain, ceramics and glass at Kuskovo Museum Estate',
+ 1000,
+ 'The exhibition “The Alexei Morozov Collection: Porcelain, Ceramics, Glass will open in the Grand Stone Greenhouse' ||
+ ' at the Kuskovo Museum Estate For the first time, most of the porcelain collection that belonged to Alexei Morozov' ||
+ ' (1857–1934) – Russian porcelain, ceramics and glass – will be exhibited. This will include the main part of the' ||
+ ' collections of the State Museum of Ceramics that was moved to the Kuskovo Museum Estate in 1932. In the ' ||
+ '1920s–1930s, other private collections were added, but Alexei Morozov’s collection remains the largest.', 1),
+
+(2,'2019-10-2 15:00' ,
+ '‘Lagrange Streets’ in the Lumière Brothers Photography Centre',
+ 500,
+ 'The Lumière Brothers Photography Centre opens a new season with an anniversary Vladimir Lagrange exhibition.' ||
+ ' Pictures by this Soviet and Russian photographer have become a symbol of the Thaw of the 1960s. In these classic' ||
+ ' Soviet art works, Vladimir Lagrange showed the life of ordinary people. He had a gift to feel the atmosphere of' ||
+ ' a particular time.', 2),
+
+(3, '2019-12-3 18:00',
+ 'Jewellery Craftsmanship. Traditions and Modernity at the New Manege',
+ 2000,
+ '9 to 20 October, the New Manege will run an exhibition of jewellery and decorative arts Jewellery Craftsmanship.' ||
+ ' Traditions and Modernity. Three halls will host a display telling about the development of Russian jewellery for' ||
+ ' three centuries — from the 18th century to the present day. ',3),
+
+(4, '2019-11-4 10:30',
+ '''Moscow Theatres, Golden Mask Award Winners'' on Chistoprudny Boulevard!',
+ 1000,
+ 'The photo exhibition ''Moscow Theatres, Golden Mask Award Winners'' will open on Chistoprudny Boulevard featuring' ||
+ ' photos by Alexander Ivanishin.
+
+He captured a backstage life of the Moscow theatres. You will see rehearsals captured at the Chekhov Moscow Art' ||
+ ' Theatre, the Pyotr Fomenko Workshop, the Shadow Theatre, the Stanislavsky and Nemirovich-Danchenko Music Theatre' ||
+ ' and many others.', 4),
+
+(5,'2019-10-5 15:00' ,
+ 'Ceramics Exhibition in Tsaritsyno Museum Reserve',
+ 500,
+ 'Small Palace of Tsaritsyno Museum Reserve is running the exhibition ''Shadow of a Woman'' as part of the Ceramics' ||
+ ' in Tsaritsyno project.
+
+This ceramic art exhibition presents the collection of sculptures, figurines and decorative compositions made by' ||
+ ' Soviet artists of the 1960s–1980s.', 5),
+
+(6, '2019-12-6 18:00',
+ 'Historical tour of the Helikon Opera Theatre',
+ 2000,
+ 'Helikon Opera Moscow Music Theatre invites to join a historical tour.
+
+You will discover the history of the building and its state rooms, see today’s theatre centre, the old Belokolonny' ||
+ ' Hall of Princess Shakhovskaya, listen to a story about the famous theatre groups, and visit a unique exhibition' ||
+ ' at Zimin Lobby and Gallery.
+
+Also, visitors will view new Stravinsky theatre hall. Free admission.',6),
+
+(7, '2019-11-7 10:30',
+ '''Life Is a Long Run'' at Alexander Shilov Gallery',
+ 1000,
+ 'Alexander Shilov Gallery will host an exhibition ''Life Is a Long Run'' about the Russian peasantry.
+
+Visitors will see the paintings ''Master of the Earth'', ''Getting Cold'', ''Waiting'', ''Fate'' and others. The' ||
+ ' artist seeks to understand the Russian character and capture life in authentic and realistic manner.
+
+Full ticket — RUB 200, discount ticket — RUB 80.', 7),
+
+(8,'2019-10-8 15:00' ,
+ '“Iconography and Graphic Image of the Saviour” at Kolomenskoye Museum Reserve',
+ 500,
+ 'Visit the exhibition “Iconography and Graphic Image of the Saviour” at Church of St. George, Kolomenskoye Museum Reserve.
+
+You will see icons and graphics, as well as books from the Museum Reserve’s collection. Each image type of Christ has' ||
+ ' a detailed description.
+
+Religious books have no description of how the Saviour looked like, that is why his image has always been of interest' ||
+ ' for Christians. So at first one of the main image types appeared - the Holy Mandylion, then the Infant Jesus with' ||
+ ' Holy Virgin, Christ Emmanuel, Christ Pantocrator.', 8),
+
+(9, '2019-12-9 18:00',
+ '''Snow Policy'' exhibition in Tsaritsyno Museum Reserve',
+ 2000,
+ 'Tsaritsyno Museum Reserve invites to attend the exhibition and installation ''Snow Policy'' by the artist Sergei Katran.
+
+The exhibition''s highlight is a fantasy about the climatic malfunction, which caused unprecedented snowfalls in ' ||
+ 'summer. At the same time, this ''natural disaster'' will be an opportunity to take a fresh look at the Museum''' ||
+ 's building and Sheremetev collection of sculptures from Moscow Ostankino Museum Estate exhibited in its halls.' ||
+ '  It will be accompanied by real media reports about heavy snowfall voiced by soloist of Stanislavsky Electro' ||
+ ' Theatre Alexei Kokhanov.', 9),
+
+(10, '2019-11-10 10:30',
+ '''The World to Come: Ecology as a New Policy. 2030-2100'' at the Garage Museum',
+ 1000,
+ 'Visit the biggest exhibition of 2019, ''The World to Come: Ecology as a New Policy. 2030-2100'', at the Garage' ||
+ ' Museum of Contemporary Art. The display will occupy the entire space of the Museum, with more than 50 artists' ||
+ ' from Russia and other countries presenting their works.', 10),
+
+(11,'2019-10-11 15:00' ,
+ '''Style to Choose. Interiors of Historicism Era'' in Lyublino Museum Estate',
+ 500,
+ 'Pink Hall of Durasov Palace exhibition ''Style to Choose. Interiors of Historicism Era''.
+
+Visitors will learn how the approach to interior decoration changed between the 1830s and the 1890s. The Museum ' ||
+ 'will present the world of things that served as the background for dramatic scenes of literary works by Russian' ||
+ ' and European classics.', 11),
+
+(12, '2019-12-12 18:00',
+ 'Exhibition of Croatian artists at the Museum of Russian Lubok and Naïve Art',
+ 2000,
+ 'The Museum of Russian Lubok and Naïve Art will run the exhibition of Croatian artists, representatives of Hlebine' ||
+ ' school, such as Ivan Generalić, Mijo Kovačić, Ivan Večenaj, Dragan Gaži and Ivan Lacković.', 12),
+
+(13, '2019-11-13 10:30',
+ '''Russian Jordaenses'' at the Pushkin State Museum of Fine Arts',
+ 1000,
+ 'The Pushkin State Museum of Fine Arts will run an exhibition ''Russian Jordaenses''. For the first time, art' ||
+ ' connoisseurs will have an opportunity to view the best works by the Flemish artist Jacob Jordaens, stored in ' ||
+ 'Moscow and regional museums.
+
+Jacob Jordaens was born in 1593. Together with Peter Rubens, he was learning art from the famous Adam van Noort.' ||
+ ' The representatives of Charles I of England, Queen Henrietta Maria of France and the House of Orange-Nassau' ||
+ ' were among his customers.', 13),
+
+(14,'2019-10-14 15:00' ,
+ 'Exhibition of Serge Lido''s ballet photographs at the Multimedia Art Museum',
+ 500,
+ 'Multimedia Art Museum organizes the first Russian exhibition of photographs by Serge Lido, a ballet photographer' ||
+ ' of the mid-20th century. He also shot famous people such as Jean Cocteau, Giorgio de Chirico, Pablo Picasso,' ||
+ ' Edith Piaf, Marcello Mastroianni, Pierre Cardin, Brigitte Bardot, and many others.', 14),
+
+(15, '2019-12-15 18:00',
+ 'Rosemarie Trockel exhibition at the Multimedia Art Museum',
+ 2000,
+ 'Multimedia Art Museum hosts an exhibition of German artist Rosemarie Trockel, who has been struggling with male' ||
+ ' dominance in the arts throughout her career.
+
+Rosemarie Trockel contrasts the figure of a male artist genius with female role models and meanings. In an ironic' ||
+ ' and humorous way, she highlights the prejudices women face in society and the arts.',15),
+
+(16, '2019-11-16 10:30',
+ '''Vladimir Yankilevsky. Monument Heroïque'' at Multimedia Art Museum',
+ 1000,
+ 'Multimedia Art Museum is running the exhibition of Vladimir Yankilevsky, a Soviet artist, one of the participants' ||
+ ' of the famous ''30 Years of MOSKh'' (Moscow Regional Union of Artists), the exhibition sharply criticised by' ||
+ ' Nikita Khrushchev in 1962.', 16),
+
+(17,'2019-10-17 15:00' ,
+ '''Harry Benson. The Beatles and More'' at the Lumière Brothers Photography Centre',
+ 500,
+ 'The Lumière Brothers Photography Centre presents Russia''s first exhibition of photojournalist Harry Benson. He' ||
+ ' captures US presidents, from Dwight Eisenhower to Barack Obama and Donald Trump. But the Beatles pictures made' ||
+ ' Benson really world-famous.', 17),
+
+(18, '2019-12-18 18:00',
+ '''A Journey into a Dream. Watercolour and Silk'' at the exhibition halls in Arbat Street',
+ 2000,
+ 'The State Pushkin Museum is going to be the first in Russia to host an exhibition of Alexandra Otiyeva, a French' ||
+ ' artist born in Russia.
+
+The exhibition includes the best works made in different years. She uses a sophisticated watercolour technique.
+
+',  18),
+
+(19, '2019-11-19 10:30',
+ '''Yevgeny Umnov. Favourites. To the 100th Anniversary of His Birthday'' in Multimedia Art Museum',
+ 1000,
+ 'Multimedia Art Museum is running an exhibition of Soviet photographer Yevgeny Umnov, with photos from the magazine' ||
+ ' Ogonyok and unpublished pictures: ballet photos of the 1950s and 1960s, Maya Plisetskaya, Yuri Levitan, Leonid' ||
+ ' Utesov, Mark Bernes, Iya Savvina, Yelena Koreneva, Alexander Gradsky and other artists.', 19),
+
+(20,'2019-10-20 15:00' ,
+ '''Vertical — Horizontal: Richard Paul Lohse — Vladimir Andreyenkov'' at the Museum of Architecture',
+ 500,
+ 'Shchusev State Museum of Architecture  presents the exhibition ''Vertical — Horizontal: Richard Paul Lohse' ||
+ ' — Vladimir Andreyenkov''.', 20),
+
+(21, '2019-12-21 18:00',
+ '''Proto-signs'' at the 21st Century Gallery',
+ 2000,
+ ' 21st Century Gallery is opening the exhibition ''Proto-signs'' by Nikolai Selivanov.
+
+''Proto-sign'' is a concept to describe an artwork without words. A proto-sign cannot be fully understood, but' ||
+ ' one can only perceive its meaning.', 21) [22001-197]
+2019-10-14 17:20:22 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Синтаксическая ошибка в выражении SQL "INSERT INTO EVENT (ID, DATE, NAME, MAX_MEMBERS, DESCRIPTION, CITY_ID)
+VALUES
+(1, '2019-11-1 10:30',
+ 'The Alexei Morozov collection: Porcelain, ceramics and glass at Kuskovo Museum Estate',
+ 1000,
+ 'The exhibition “The Alexei Morozov Collection: Porcelain, Ceramics, Glass will open in the Grand Stone Greenhouse' ||
+ ' at the Kuskovo Museum Estate For the first time, most of the porcelain collection that belonged to Alexei Morozov' ||
+ ' (1857–1934) – Russian porcelain, ceramics and glass – will be exhibited. This will include the main part of the' ||
+ ' collections of the State Museum of Ceramics that was moved to the Kuskovo Museum Estate in 1932. In the ' ||
+ '1920s–1930s, other private collections were added, but Alexei Morozov’s collection remains the largest.', 1),
+
+(2,'2019-10-2 15:00' ,
+ '‘Lagrange Streets’ in the Lumière Brothers Photography Centre',
+ 500,
+ 'The Lumière Brothers Photography Centre opens a new season with an anniversary Vladimir Lagrange exhibition.' ||
+ ' Pictures by this Soviet and Russian photographer have become a symbol of the Thaw of the 1960s. In these classic' ||
+ ' Soviet art works, Vladimir Lagrange showed the life of ordinary people. He had a gift to feel the atmosphere of' ||
+ ' a particular time.', 2),
+
+(3, '2019-12-3 18:00',
+ 'Jewellery Craftsmanship. Traditions and Modernity at the New Manege',
+ 2000,
+ '9 to 20 October, the New Manege will run an exhibition of jewellery and decorative arts Jewellery Craftsmanship.' ||
+ ' Traditions and Modernity. Three halls will host a display telling about the development of Russian jewellery for' ||
+ ' three centuries — from the 18th century to the present day. ',3),
+
+(4, '2019-11-4 10:30',
+ '''Moscow Theatres, Golden Mask Award Winners'' on Chistoprudny Boulevard!',
+ 1000,
+ 'The photo exhibition ''Moscow Theatres, Golden Mask Award Winners'' will open on Chistoprudny Boulevard featuring' ||
+ ' photos by Alexander Ivanishin.
+
+He captured a backstage life of the Moscow theatres. You will see rehearsals captured at the Chekhov Moscow Art' ||
+ ' Theatre, the Pyotr Fomenko Workshop, the Shadow Theatre, the Stanislavsky and Nemirovich-Danchenko Music Theatre' ||
+ ' and many others.', 4),
+
+(5,'2019-10-5 15:00' ,
+ 'Ceramics Exhibition in Tsaritsyno Museum Reserve',
+ 500,
+ 'Small Palace of Tsaritsyno Museum Reserve is running the exhibition ''Shadow of a Woman'' as part of the Ceramics' ||
+ ' in Tsaritsyno project.
+
+This ceramic art exhibition presents the collection of sculptures, figurines and decorative compositions made by' ||
+ ' Soviet artists of the 1960s–1980s.', 5),
+
+(6, '2019-12-6 18:00',
+ 'Historical tour of the Helikon Opera Theatre',
+ 2000,
+ 'Helikon Opera Moscow Music Theatre invites to join a historical tour.
+
+You will discover the history of the building and its state rooms, see today’s theatre centre, the old Belokolonny' ||
+ ' Hall of Princess Shakhovskaya, listen to a story about the famous theatre groups, and visit a unique exhibition' ||
+ ' at Zimin Lobby and Gallery.
+
+Also, visitors will view new Stravinsky theatre hall. Free admission.',6),
+
+(7, '2019-11-7 10:30',
+ '''Life Is a Long Run'' at Alexander Shilov Gallery',
+ 1000,
+ 'Alexander Shilov Gallery will host an exhibition ''Life Is a Long Run'' about the Russian peasantry.
+
+Visitors will see the paintings ''Master of the Earth'', ''Getting Cold'', ''Waiting'', ''Fate'' and others. The' ||
+ ' artist seeks to understand the Russian character and capture life in authentic and realistic manner.
+
+Full ticket — RUB 200, discount ticket — RUB 80.', 7),
+
+(8,'2019-10-8 15:00' ,
+ '“Iconography and Graphic Image of the Saviour” at Kolomenskoye Museum Reserve',
+ 500,
+ 'Visit the exhibition “Iconography and Graphic Image of the Saviour” at Church of St. George, Kolomenskoye Museum Reserve.
+
+You will see icons and graphics, as well as books from the Museum Reserve’s collection. Each image type of Christ has' ||
+ ' a detailed description.
+
+Religious books have no description of how the Saviour looked like, that is why his image has always been of interest' ||
+ ' for Christians. So at first one of the main image types appeared - the Holy Mandylion, then the Infant Jesus with' ||
+ ' Holy Virgin, Christ Emmanuel, Christ Pantocrator.', 8),
+
+(9, '2019-12-9 18:00',
+ '''Snow Policy'' exhibition in Tsaritsyno Museum Reserve',
+ 2000,
+ 'Tsaritsyno Museum Reserve invites to attend the exhibition and installation ''Snow Policy'' by the artist Sergei Katran.
+
+The exhibition''s highlight is a fantasy about the climatic malfunction, which caused unprecedented snowfalls in ' ||
+ 'summer. At the same time, this ''natural disaster'' will be an opportunity to take a fresh look at the Museum''' ||
+ 's building and Sheremetev collection of sculptures from Moscow Ostankino Museum Estate exhibited in its halls.' ||
+ '  It will be accompanied by real media reports about heavy snowfall voiced by soloist of Stanislavsky Electro' ||
+ ' Theatre Alexei Kokhanov.', 9),
+
+(10, '2019-11-10 10:30',
+ '''The World to Come: Ecology as a New Policy. 2030-2100'' at the Garage Museum',
+ 1000,
+ 'Visit the biggest exhibition of 2019, ''The World to Come: Ecology as a New Policy. 2030-2100'', at the Garage' ||
+ ' Museum of Contemporary Art. The display will occupy the entire space of the Museum, with more than 50 artists' ||
+ ' from Russia and other countries presenting their works.', 10),
+
+(11,'2019-10-11 15:00' ,
+ '''Style to Choose. Interiors of Historicism Era'' in Lyublino Museum Estate',
+ 500,
+ 'Pink Hall of Durasov Palace exhibition ''Style to Choose. Interiors of Historicism Era''.
+
+Visitors will learn how the approach to interior decoration changed between the 1830s and the 1890s. The Museum ' ||
+ 'will present the world of things that served as the background for dramatic scenes of literary works by Russian' ||
+ ' and European classics.', 11),
+
+(12, '2019-12-12 18:00',
+ 'Exhibition of Croatian artists at the Museum of Russian Lubok and Naïve Art',
+ 2000,
+ 'The Museum of Russian Lubok and Naïve Art will run the exhibition of Croatian artists, representatives of Hlebine' ||
+ ' school, such as Ivan Generalić, Mijo Kovačić, Ivan Večenaj, Dragan Gaži and Ivan Lacković.', 12),
+
+(13, '2019-11-13 10:30',
+ '''Russian Jordaenses'' at the Pushkin State Museum of Fine Arts',
+ 1000,
+ 'The Pushkin State Museum of Fine Arts will run an exhibition ''Russian Jordaenses''. For the first time, art' ||
+ ' connoisseurs will have an opportunity to view the best works by the Flemish artist Jacob Jordaens, stored in ' ||
+ 'Moscow and regional museums.
+
+Jacob Jordaens was born in 1593. Together with Peter Rubens, he was learning art from the famous Adam van Noort.' ||
+ ' The representatives of Charles I of England, Queen Henrietta Maria of France and the House of Orange-Nassau' ||
+ ' were among his customers.', 13),
+
+(14,'2019-10-14 15:00' ,
+ 'Exhibition of Serge Lido''s ballet photographs at the Multimedia Art Museum',
+ 500,
+ 'Multimedia Art Museum organizes the first Russian exhibition of photographs by Serge Lido, a ballet photographer' ||
+ ' of the mid-20th century. He also shot famous people such as Jean Cocteau, Giorgio de Chirico, Pablo Picasso,' ||
+ ' Edith Piaf, Marcello Mastroianni, Pierre Cardin, Brigitte Bardot, and many others.', 14),
+
+(15, '2019-12-15 18:00',
+ 'Rosemarie Trockel exhibition at the Multimedia Art Museum',
+ 2000,
+ 'Multimedia Art Museum hosts an exhibition of German artist Rosemarie Trockel, who has been struggling with male' ||
+ ' dominance in the arts throughout her career.
+
+Rosemarie Trockel contrasts the figure of a male artist genius with female role models and meanings. In an ironic' ||
+ ' and humorous way, she highlights the prejudices women face in society and the arts.',15),
+
+(16, '2019-11-16 10:30',
+ '''Vladimir Yankilevsky. Monument Heroïque'' at Multimedia Art Museum',
+ 1000,
+ 'Multimedia Art Museum is running the exhibition of Vladimir Yankilevsky, a Soviet artist, one of the participants' ||
+ ' of the famous ''30 Years of MOSKh'' (Moscow Regional Union of Artists), the exhibition sharply criticised by' ||
+ ' Nikita Khrushchev in 1962.', 16),
+
+(17,'2019-10-17 15:00' ,
+ '''Harry Benson. The Beatles and More'' at the Lumière Brothers Photography Centre',
+ 500,
+ 'The Lumière Brothers Photography Centre presents Russia''s first exhibition of photojournalist Harry Benson. He' ||
+ ' captures US presidents, from Dwight Eisenhower to Barack Obama and Donald Trump. But the Beatles pictures made' ||
+ ' Benson really world-famous.', 17),
+
+(18, '2019-12-18 18:00',
+ '''A Journey into a Dream. Watercolour and Silk'' at the exhibition halls in Arbat Street',
+ 2000,
+ 'The State Pushkin Museum is going to be the first in Russia to host an exhibition of Alexandra Otiyeva, a French' ||
+ ' artist born in Russia.
+
+The exhibition includes the best works made in different years. She uses a sophisticated watercolour technique.
+
+',  18),
+
+(19, '2019-11-19 10:30',
+ '''Yevgeny Umnov. Favourites. To the 100th Anniversary of His Birthday'' in Multimedia Art Museum',
+ 1000,
+ 'Multimedia Art Museum is running an exhibition of Soviet photographer Yevgeny Umnov, with photos from the magazine' ||
+ ' Ogonyok and unpublished pictures: ballet photos of the 1950s and 1960s, Maya Plisetskaya, Yuri Levitan, Leonid' ||
+ ' Utesov, Mark Bernes, Iya Savvina, Yelena Koreneva, Alexander Gradsky and other artists.', 19),
+
+(20,'2019-10-20 15:00' ,
+ '''Vertical — Horizontal: Richard Paul Lohse — Vladimir Andreyenkov'' at the Museum of Architecture',
+ 500,
+ 'Shchusev State Museum of Architecture  presents the exhibition ''Vertical — Horizontal: Richard Paul Lohse' ||
+ ' — Vladimir Andreyenkov''.', 20),
+
+(21, '2019-12-21 18:00',
+ '''Proto-signs'' at the 21st Century Gallery',
+ 2000,
+ ' 21st Century Gallery is opening the exhibition ''Proto-signs'' by Nikolai Selivanov.
+
+''Proto-sign'' is a concept to describe an artwork without words. A proto-sign cannot be fully understood, but' ||
+ ' one can only perceive its meaning.', 21),
+
+(22, '2019-12-21 18:00',
+ '''Proto-signs'' at the 21st Century Gallery',
+ 2000,
+ ' 21st Century Gallery is opening the exhibition ''Proto-signs'' by Nikolai Selivanov.
+
+''Proto-sign'' is a concept to describe an artwork without words. A proto-sign cannot be fully understood, but' ||
+ ' one can only perceive its meaning.', 22),
+
+(23, '2019-12-21 18:00',
+ '''Proto-signs'' at the 21st Century Gallery',
+ 2000,
+ ' 21st Century Gallery is opening the exhibition ''Proto-signs'' by Nikolai Selivanov.
+
+''Proto-sign'' is a concept to describe an artwork without words. A proto-sign cannot be fully understood, but' ||
+ ' one can only perceive its meaning.', 23),
+
+INSERT[*] INTO USER_EVENT (USER_ID, EVENT_ID)
+VALUES
+(1,1),
+(2,2),
+(3,3),
+(1,2) "
+Syntax error in SQL statement "INSERT INTO EVENT (ID, DATE, NAME, MAX_MEMBERS, DESCRIPTION, CITY_ID)
+VALUES
+(1, '2019-11-1 10:30',
+ 'The Alexei Morozov collection: Porcelain, ceramics and glass at Kuskovo Museum Estate',
+ 1000,
+ 'The exhibition “The Alexei Morozov Collection: Porcelain, Ceramics, Glass will open in the Grand Stone Greenhouse' ||
+ ' at the Kuskovo Museum Estate For the first time, most of the porcelain collection that belonged to Alexei Morozov' ||
+ ' (1857–1934) – Russian porcelain, ceramics and glass – will be exhibited. This will include the main part of the' ||
+ ' collections of the State Museum of Ceramics that was moved to the Kuskovo Museum Estate in 1932. In the ' ||
+ '1920s–1930s, other private collections were added, but Alexei Morozov’s collection remains the largest.', 1),
+
+(2,'2019-10-2 15:00' ,
+ '‘Lagrange Streets’ in the Lumière Brothers Photography Centre',
+ 500,
+ 'The Lumière Brothers Photography Centre opens a new season with an anniversary Vladimir Lagrange exhibition.' ||
+ ' Pictures by this Soviet and Russian photographer have become a symbol of the Thaw of the 1960s. In these classic' ||
+ ' Soviet art works, Vladimir Lagrange showed the life of ordinary people. He had a gift to feel the atmosphere of' ||
+ ' a particular time.', 2),
+
+(3, '2019-12-3 18:00',
+ 'Jewellery Craftsmanship. Traditions and Modernity at the New Manege',
+ 2000,
+ '9 to 20 October, the New Manege will run an exhibition of jewellery and decorative arts Jewellery Craftsmanship.' ||
+ ' Traditions and Modernity. Three halls will host a display telling about the development of Russian jewellery for' ||
+ ' three centuries — from the 18th century to the present day. ',3),
+
+(4, '2019-11-4 10:30',
+ '''Moscow Theatres, Golden Mask Award Winners'' on Chistoprudny Boulevard!',
+ 1000,
+ 'The photo exhibition ''Moscow Theatres, Golden Mask Award Winners'' will open on Chistoprudny Boulevard featuring' ||
+ ' photos by Alexander Ivanishin.
+
+He captured a backstage life of the Moscow theatres. You will see rehearsals captured at the Chekhov Moscow Art' ||
+ ' Theatre, the Pyotr Fomenko Workshop, the Shadow Theatre, the Stanislavsky and Nemirovich-Danchenko Music Theatre' ||
+ ' and many others.', 4),
+
+(5,'2019-10-5 15:00' ,
+ 'Ceramics Exhibition in Tsaritsyno Museum Reserve',
+ 500,
+ 'Small Palace of Tsaritsyno Museum Reserve is running the exhibition ''Shadow of a Woman'' as part of the Ceramics' ||
+ ' in Tsaritsyno project.
+
+This ceramic art exhibition presents the collection of sculptures, figurines and decorative compositions made by' ||
+ ' Soviet artists of the 1960s–1980s.', 5),
+
+(6, '2019-12-6 18:00',
+ 'Historical tour of the Helikon Opera Theatre',
+ 2000,
+ 'Helikon Opera Moscow Music Theatre invites to join a historical tour.
+
+You will discover the history of the building and its state rooms, see today’s theatre centre, the old Belokolonny' ||
+ ' Hall of Princess Shakhovskaya, listen to a story about the famous theatre groups, and visit a unique exhibition' ||
+ ' at Zimin Lobby and Gallery.
+
+Also, visitors will view new Stravinsky theatre hall. Free admission.',6),
+
+(7, '2019-11-7 10:30',
+ '''Life Is a Long Run'' at Alexander Shilov Gallery',
+ 1000,
+ 'Alexander Shilov Gallery will host an exhibition ''Life Is a Long Run'' about the Russian peasantry.
+
+Visitors will see the paintings ''Master of the Earth'', ''Getting Cold'', ''Waiting'', ''Fate'' and others. The' ||
+ ' artist seeks to understand the Russian character and capture life in authentic and realistic manner.
+
+Full ticket — RUB 200, discount ticket — RUB 80.', 7),
+
+(8,'2019-10-8 15:00' ,
+ '“Iconography and Graphic Image of the Saviour” at Kolomenskoye Museum Reserve',
+ 500,
+ 'Visit the exhibition “Iconography and Graphic Image of the Saviour” at Church of St. George, Kolomenskoye Museum Reserve.
+
+You will see icons and graphics, as well as books from the Museum Reserve’s collection. Each image type of Christ has' ||
+ ' a detailed description.
+
+Religious books have no description of how the Saviour looked like, that is why his image has always been of interest' ||
+ ' for Christians. So at first one of the main image types appeared - the Holy Mandylion, then the Infant Jesus with' ||
+ ' Holy Virgin, Christ Emmanuel, Christ Pantocrator.', 8),
+
+(9, '2019-12-9 18:00',
+ '''Snow Policy'' exhibition in Tsaritsyno Museum Reserve',
+ 2000,
+ 'Tsaritsyno Museum Reserve invites to attend the exhibition and installation ''Snow Policy'' by the artist Sergei Katran.
+
+The exhibition''s highlight is a fantasy about the climatic malfunction, which caused unprecedented snowfalls in ' ||
+ 'summer. At the same time, this ''natural disaster'' will be an opportunity to take a fresh look at the Museum''' ||
+ 's building and Sheremetev collection of sculptures from Moscow Ostankino Museum Estate exhibited in its halls.' ||
+ '  It will be accompanied by real media reports about heavy snowfall voiced by soloist of Stanislavsky Electro' ||
+ ' Theatre Alexei Kokhanov.', 9),
+
+(10, '2019-11-10 10:30',
+ '''The World to Come: Ecology as a New Policy. 2030-2100'' at the Garage Museum',
+ 1000,
+ 'Visit the biggest exhibition of 2019, ''The World to Come: Ecology as a New Policy. 2030-2100'', at the Garage' ||
+ ' Museum of Contemporary Art. The display will occupy the entire space of the Museum, with more than 50 artists' ||
+ ' from Russia and other countries presenting their works.', 10),
+
+(11,'2019-10-11 15:00' ,
+ '''Style to Choose. Interiors of Historicism Era'' in Lyublino Museum Estate',
+ 500,
+ 'Pink Hall of Durasov Palace exhibition ''Style to Choose. Interiors of Historicism Era''.
+
+Visitors will learn how the approach to interior decoration changed between the 1830s and the 1890s. The Museum ' ||
+ 'will present the world of things that served as the background for dramatic scenes of literary works by Russian' ||
+ ' and European classics.', 11),
+
+(12, '2019-12-12 18:00',
+ 'Exhibition of Croatian artists at the Museum of Russian Lubok and Naïve Art',
+ 2000,
+ 'The Museum of Russian Lubok and Naïve Art will run the exhibition of Croatian artists, representatives of Hlebine' ||
+ ' school, such as Ivan Generalić, Mijo Kovačić, Ivan Večenaj, Dragan Gaži and Ivan Lacković.', 12),
+
+(13, '2019-11-13 10:30',
+ '''Russian Jordaenses'' at the Pushkin State Museum of Fine Arts',
+ 1000,
+ 'The Pushkin State Museum of Fine Arts will run an exhibition ''Russian Jordaenses''. For the first time, art' ||
+ ' connoisseurs will have an opportunity to view the best works by the Flemish artist Jacob Jordaens, stored in ' ||
+ 'Moscow and regional museums.
+
+Jacob Jordaens was born in 1593. Together with Peter Rubens, he was learning art from the famous Adam van Noort.' ||
+ ' The representatives of Charles I of England, Queen Henrietta Maria of France and the House of Orange-Nassau' ||
+ ' were among his customers.', 13),
+
+(14,'2019-10-14 15:00' ,
+ 'Exhibition of Serge Lido''s ballet photographs at the Multimedia Art Museum',
+ 500,
+ 'Multimedia Art Museum organizes the first Russian exhibition of photographs by Serge Lido, a ballet photographer' ||
+ ' of the mid-20th century. He also shot famous people such as Jean Cocteau, Giorgio de Chirico, Pablo Picasso,' ||
+ ' Edith Piaf, Marcello Mastroianni, Pierre Cardin, Brigitte Bardot, and many others.', 14),
+
+(15, '2019-12-15 18:00',
+ 'Rosemarie Trockel exhibition at the Multimedia Art Museum',
+ 2000,
+ 'Multimedia Art Museum hosts an exhibition of German artist Rosemarie Trockel, who has been struggling with male' ||
+ ' dominance in the arts throughout her career.
+
+Rosemarie Trockel contrasts the figure of a male artist genius with female role models and meanings. In an ironic' ||
+ ' and humorous way, she highlights the prejudices women face in society and the arts.',15),
+
+(16, '2019-11-16 10:30',
+ '''Vladimir Yankilevsky. Monument Heroïque'' at Multimedia Art Museum',
+ 1000,
+ 'Multimedia Art Museum is running the exhibition of Vladimir Yankilevsky, a Soviet artist, one of the participants' ||
+ ' of the famous ''30 Years of MOSKh'' (Moscow Regional Union of Artists), the exhibition sharply criticised by' ||
+ ' Nikita Khrushchev in 1962.', 16),
+
+(17,'2019-10-17 15:00' ,
+ '''Harry Benson. The Beatles and More'' at the Lumière Brothers Photography Centre',
+ 500,
+ 'The Lumière Brothers Photography Centre presents Russia''s first exhibition of photojournalist Harry Benson. He' ||
+ ' captures US presidents, from Dwight Eisenhower to Barack Obama and Donald Trump. But the Beatles pictures made' ||
+ ' Benson really world-famous.', 17),
+
+(18, '2019-12-18 18:00',
+ '''A Journey into a Dream. Watercolour and Silk'' at the exhibition halls in Arbat Street',
+ 2000,
+ 'The State Pushkin Museum is going to be the first in Russia to host an exhibition of Alexandra Otiyeva, a French' ||
+ ' artist born in Russia.
+
+The exhibition includes the best works made in different years. She uses a sophisticated watercolour technique.
+
+',  18),
+
+(19, '2019-11-19 10:30',
+ '''Yevgeny Umnov. Favourites. To the 100th Anniversary of His Birthday'' in Multimedia Art Museum',
+ 1000,
+ 'Multimedia Art Museum is running an exhibition of Soviet photographer Yevgeny Umnov, with photos from the magazine' ||
+ ' Ogonyok and unpublished pictures: ballet photos of the 1950s and 1960s, Maya Plisetskaya, Yuri Levitan, Leonid' ||
+ ' Utesov, Mark Bernes, Iya Savvina, Yelena Koreneva, Alexander Gradsky and other artists.', 19),
+
+(20,'2019-10-20 15:00' ,
+ '''Vertical — Horizontal: Richard Paul Lohse — Vladimir Andreyenkov'' at the Museum of Architecture',
+ 500,
+ 'Shchusev State Museum of Architecture  presents the exhibition ''Vertical — Horizontal: Richard Paul Lohse' ||
+ ' — Vladimir Andreyenkov''.', 20),
+
+(21, '2019-12-21 18:00',
+ '''Proto-signs'' at the 21st Century Gallery',
+ 2000,
+ ' 21st Century Gallery is opening the exhibition ''Proto-signs'' by Nikolai Selivanov.
+
+''Proto-sign'' is a concept to describe an artwork without words. A proto-sign cannot be fully understood, but' ||
+ ' one can only perceive its meaning.', 21),
+
+(22, '2019-12-21 18:00',
+ '''Proto-signs'' at the 21st Century Gallery',
+ 2000,
+ ' 21st Century Gallery is opening the exhibition ''Proto-signs'' by Nikolai Selivanov.
+
+''Proto-sign'' is a concept to describe an artwork without words. A proto-sign cannot be fully understood, but' ||
+ ' one can only perceive its meaning.', 22),
+
+(23, '2019-12-21 18:00',
+ '''Proto-signs'' at the 21st Century Gallery',
+ 2000,
+ ' 21st Century Gallery is opening the exhibition ''Proto-signs'' by Nikolai Selivanov.
+
+''Proto-sign'' is a concept to describe an artwork without words. A proto-sign cannot be fully understood, but' ||
+ ' one can only perceive its meaning.', 23),
+
+INSERT[*] INTO USER_EVENT (USER_ID, EVENT_ID)
+VALUES
+(1,1),
+(2,2),
+(3,3),
+(1,2) "; SQL statement:
+INSERT INTO EVENT (id, date, name, max_members, description, city_id)
+VALUES
+(1, '2019-11-1 10:30',
+ 'The Alexei Morozov collection: Porcelain, ceramics and glass at Kuskovo Museum Estate',
+ 1000,
+ 'The exhibition “The Alexei Morozov Collection: Porcelain, Ceramics, Glass will open in the Grand Stone Greenhouse' ||
+ ' at the Kuskovo Museum Estate For the first time, most of the porcelain collection that belonged to Alexei Morozov' ||
+ ' (1857–1934) – Russian porcelain, ceramics and glass – will be exhibited. This will include the main part of the' ||
+ ' collections of the State Museum of Ceramics that was moved to the Kuskovo Museum Estate in 1932. In the ' ||
+ '1920s–1930s, other private collections were added, but Alexei Morozov’s collection remains the largest.', 1),
+
+(2,'2019-10-2 15:00' ,
+ '‘Lagrange Streets’ in the Lumière Brothers Photography Centre',
+ 500,
+ 'The Lumière Brothers Photography Centre opens a new season with an anniversary Vladimir Lagrange exhibition.' ||
+ ' Pictures by this Soviet and Russian photographer have become a symbol of the Thaw of the 1960s. In these classic' ||
+ ' Soviet art works, Vladimir Lagrange showed the life of ordinary people. He had a gift to feel the atmosphere of' ||
+ ' a particular time.', 2),
+
+(3, '2019-12-3 18:00',
+ 'Jewellery Craftsmanship. Traditions and Modernity at the New Manege',
+ 2000,
+ '9 to 20 October, the New Manege will run an exhibition of jewellery and decorative arts Jewellery Craftsmanship.' ||
+ ' Traditions and Modernity. Three halls will host a display telling about the development of Russian jewellery for' ||
+ ' three centuries — from the 18th century to the present day. ',3),
+
+(4, '2019-11-4 10:30',
+ '''Moscow Theatres, Golden Mask Award Winners'' on Chistoprudny Boulevard!',
+ 1000,
+ 'The photo exhibition ''Moscow Theatres, Golden Mask Award Winners'' will open on Chistoprudny Boulevard featuring' ||
+ ' photos by Alexander Ivanishin.
+
+He captured a backstage life of the Moscow theatres. You will see rehearsals captured at the Chekhov Moscow Art' ||
+ ' Theatre, the Pyotr Fomenko Workshop, the Shadow Theatre, the Stanislavsky and Nemirovich-Danchenko Music Theatre' ||
+ ' and many others.', 4),
+
+(5,'2019-10-5 15:00' ,
+ 'Ceramics Exhibition in Tsaritsyno Museum Reserve',
+ 500,
+ 'Small Palace of Tsaritsyno Museum Reserve is running the exhibition ''Shadow of a Woman'' as part of the Ceramics' ||
+ ' in Tsaritsyno project.
+
+This ceramic art exhibition presents the collection of sculptures, figurines and decorative compositions made by' ||
+ ' Soviet artists of the 1960s–1980s.', 5),
+
+(6, '2019-12-6 18:00',
+ 'Historical tour of the Helikon Opera Theatre',
+ 2000,
+ 'Helikon Opera Moscow Music Theatre invites to join a historical tour.
+
+You will discover the history of the building and its state rooms, see today’s theatre centre, the old Belokolonny' ||
+ ' Hall of Princess Shakhovskaya, listen to a story about the famous theatre groups, and visit a unique exhibition' ||
+ ' at Zimin Lobby and Gallery.
+
+Also, visitors will view new Stravinsky theatre hall. Free admission.',6),
+
+(7, '2019-11-7 10:30',
+ '''Life Is a Long Run'' at Alexander Shilov Gallery',
+ 1000,
+ 'Alexander Shilov Gallery will host an exhibition ''Life Is a Long Run'' about the Russian peasantry.
+
+Visitors will see the paintings ''Master of the Earth'', ''Getting Cold'', ''Waiting'', ''Fate'' and others. The' ||
+ ' artist seeks to understand the Russian character and capture life in authentic and realistic manner.
+
+Full ticket — RUB 200, discount ticket — RUB 80.', 7),
+
+(8,'2019-10-8 15:00' ,
+ '“Iconography and Graphic Image of the Saviour” at Kolomenskoye Museum Reserve',
+ 500,
+ 'Visit the exhibition “Iconography and Graphic Image of the Saviour” at Church of St. George, Kolomenskoye Museum Reserve.
+
+You will see icons and graphics, as well as books from the Museum Reserve’s collection. Each image type of Christ has' ||
+ ' a detailed description.
+
+Religious books have no description of how the Saviour looked like, that is why his image has always been of interest' ||
+ ' for Christians. So at first one of the main image types appeared - the Holy Mandylion, then the Infant Jesus with' ||
+ ' Holy Virgin, Christ Emmanuel, Christ Pantocrator.', 8),
+
+(9, '2019-12-9 18:00',
+ '''Snow Policy'' exhibition in Tsaritsyno Museum Reserve',
+ 2000,
+ 'Tsaritsyno Museum Reserve invites to attend the exhibition and installation ''Snow Policy'' by the artist Sergei Katran.
+
+The exhibition''s highlight is a fantasy about the climatic malfunction, which caused unprecedented snowfalls in ' ||
+ 'summer. At the same time, this ''natural disaster'' will be an opportunity to take a fresh look at the Museum''' ||
+ 's building and Sheremetev collection of sculptures from Moscow Ostankino Museum Estate exhibited in its halls.' ||
+ '  It will be accompanied by real media reports about heavy snowfall voiced by soloist of Stanislavsky Electro' ||
+ ' Theatre Alexei Kokhanov.', 9),
+
+(10, '2019-11-10 10:30',
+ '''The World to Come: Ecology as a New Policy. 2030-2100'' at the Garage Museum',
+ 1000,
+ 'Visit the biggest exhibition of 2019, ''The World to Come: Ecology as a New Policy. 2030-2100'', at the Garage' ||
+ ' Museum of Contemporary Art. The display will occupy the entire space of the Museum, with more than 50 artists' ||
+ ' from Russia and other countries presenting their works.', 10),
+
+(11,'2019-10-11 15:00' ,
+ '''Style to Choose. Interiors of Historicism Era'' in Lyublino Museum Estate',
+ 500,
+ 'Pink Hall of Durasov Palace exhibition ''Style to Choose. Interiors of Historicism Era''.
+
+Visitors will learn how the approach to interior decoration changed between the 1830s and the 1890s. The Museum ' ||
+ 'will present the world of things that served as the background for dramatic scenes of literary works by Russian' ||
+ ' and European classics.', 11),
+
+(12, '2019-12-12 18:00',
+ 'Exhibition of Croatian artists at the Museum of Russian Lubok and Naïve Art',
+ 2000,
+ 'The Museum of Russian Lubok and Naïve Art will run the exhibition of Croatian artists, representatives of Hlebine' ||
+ ' school, such as Ivan Generalić, Mijo Kovačić, Ivan Večenaj, Dragan Gaži and Ivan Lacković.', 12),
+
+(13, '2019-11-13 10:30',
+ '''Russian Jordaenses'' at the Pushkin State Museum of Fine Arts',
+ 1000,
+ 'The Pushkin State Museum of Fine Arts will run an exhibition ''Russian Jordaenses''. For the first time, art' ||
+ ' connoisseurs will have an opportunity to view the best works by the Flemish artist Jacob Jordaens, stored in ' ||
+ 'Moscow and regional museums.
+
+Jacob Jordaens was born in 1593. Together with Peter Rubens, he was learning art from the famous Adam van Noort.' ||
+ ' The representatives of Charles I of England, Queen Henrietta Maria of France and the House of Orange-Nassau' ||
+ ' were among his customers.', 13),
+
+(14,'2019-10-14 15:00' ,
+ 'Exhibition of Serge Lido''s ballet photographs at the Multimedia Art Museum',
+ 500,
+ 'Multimedia Art Museum organizes the first Russian exhibition of photographs by Serge Lido, a ballet photographer' ||
+ ' of the mid-20th century. He also shot famous people such as Jean Cocteau, Giorgio de Chirico, Pablo Picasso,' ||
+ ' Edith Piaf, Marcello Mastroianni, Pierre Cardin, Brigitte Bardot, and many others.', 14),
+
+(15, '2019-12-15 18:00',
+ 'Rosemarie Trockel exhibition at the Multimedia Art Museum',
+ 2000,
+ 'Multimedia Art Museum hosts an exhibition of German artist Rosemarie Trockel, who has been struggling with male' ||
+ ' dominance in the arts throughout her career.
+
+Rosemarie Trockel contrasts the figure of a male artist genius with female role models and meanings. In an ironic' ||
+ ' and humorous way, she highlights the prejudices women face in society and the arts.',15),
+
+(16, '2019-11-16 10:30',
+ '''Vladimir Yankilevsky. Monument Heroïque'' at Multimedia Art Museum',
+ 1000,
+ 'Multimedia Art Museum is running the exhibition of Vladimir Yankilevsky, a Soviet artist, one of the participants' ||
+ ' of the famous ''30 Years of MOSKh'' (Moscow Regional Union of Artists), the exhibition sharply criticised by' ||
+ ' Nikita Khrushchev in 1962.', 16),
+
+(17,'2019-10-17 15:00' ,
+ '''Harry Benson. The Beatles and More'' at the Lumière Brothers Photography Centre',
+ 500,
+ 'The Lumière Brothers Photography Centre presents Russia''s first exhibition of photojournalist Harry Benson. He' ||
+ ' captures US presidents, from Dwight Eisenhower to Barack Obama and Donald Trump. But the Beatles pictures made' ||
+ ' Benson really world-famous.', 17),
+
+(18, '2019-12-18 18:00',
+ '''A Journey into a Dream. Watercolour and Silk'' at the exhibition halls in Arbat Street',
+ 2000,
+ 'The State Pushkin Museum is going to be the first in Russia to host an exhibition of Alexandra Otiyeva, a French' ||
+ ' artist born in Russia.
+
+The exhibition includes the best works made in different years. She uses a sophisticated watercolour technique.
+
+',  18),
+
+(19, '2019-11-19 10:30',
+ '''Yevgeny Umnov. Favourites. To the 100th Anniversary of His Birthday'' in Multimedia Art Museum',
+ 1000,
+ 'Multimedia Art Museum is running an exhibition of Soviet photographer Yevgeny Umnov, with photos from the magazine' ||
+ ' Ogonyok and unpublished pictures: ballet photos of the 1950s and 1960s, Maya Plisetskaya, Yuri Levitan, Leonid' ||
+ ' Utesov, Mark Bernes, Iya Savvina, Yelena Koreneva, Alexander Gradsky and other artists.', 19),
+
+(20,'2019-10-20 15:00' ,
+ '''Vertical — Horizontal: Richard Paul Lohse — Vladimir Andreyenkov'' at the Museum of Architecture',
+ 500,
+ 'Shchusev State Museum of Architecture  presents the exhibition ''Vertical — Horizontal: Richard Paul Lohse' ||
+ ' — Vladimir Andreyenkov''.', 20),
+
+(21, '2019-12-21 18:00',
+ '''Proto-signs'' at the 21st Century Gallery',
+ 2000,
+ ' 21st Century Gallery is opening the exhibition ''Proto-signs'' by Nikolai Selivanov.
+
+''Proto-sign'' is a concept to describe an artwork without words. A proto-sign cannot be fully understood, but' ||
+ ' one can only perceive its meaning.', 21),
+
+(22, '2019-12-21 18:00',
+ '''Proto-signs'' at the 21st Century Gallery',
+ 2000,
+ ' 21st Century Gallery is opening the exhibition ''Proto-signs'' by Nikolai Selivanov.
+
+''Proto-sign'' is a concept to describe an artwork without words. A proto-sign cannot be fully understood, but' ||
+ ' one can only perceive its meaning.', 22),
+
+(23, '2019-12-21 18:00',
+ '''Proto-signs'' at the 21st Century Gallery',
+ 2000,
+ ' 21st Century Gallery is opening the exhibition ''Proto-signs'' by Nikolai Selivanov.
+
+''Proto-sign'' is a concept to describe an artwork without words. A proto-sign cannot be fully understood, but' ||
+ ' one can only perceive its meaning.', 23),
+
+INSERT INTO USER_EVENT (user_id, event_id)
+VALUES
+(1,1),
+(2,2),
+(3,3),
+(1,2) [42000-197]

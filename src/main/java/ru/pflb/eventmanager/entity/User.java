@@ -30,6 +30,9 @@ public class User extends AbstractEntity {
     @Column(name = "email", unique = true)
     private String email;
 
+    @ManyToMany(mappedBy = "users")
+    private List<Event> events = new ArrayList<>();
+
     @ManyToMany(fetch= FetchType.EAGER)
     @JoinTable(name = "user_role",
             joinColumns = @JoinColumn(name = "user_id"),

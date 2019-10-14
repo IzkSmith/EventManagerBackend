@@ -65,6 +65,7 @@ public class AuthenticationController {
             response.put("username", username);
             response.put("token", token);
             response.put("roles", roles);
+            response.put("id", user.getId());
 
             return ResponseEntity.ok(response);
         } catch (AuthenticationException e) {

@@ -2,6 +2,7 @@ package ru.pflb.eventmanager.rest.controller;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
@@ -22,36 +23,37 @@ import ru.pflb.eventmanager.transfer.Validation;
 @RestController
 @RequestMapping("/api/v1/event")
 public class EventController {
-    private final EventService service;
+    private final EventService eventService;
 
-    public EventController(EventService service) {
-        this.service = service;
+    public EventController(EventService eventService) {
+        this.eventService = eventService;
     }
 
     @GetMapping("/{id}")
     public ResponseEntity<EventDto> get(@PathVariable Long id) {
-        return ResponseEntity.ok(service.get(id));
+        return ResponseEntity.ok(eventService.get(id));
     }
 
-    @GetMapping("/all")
-    public ResponseEntity<Page<EventDto>> getAll(Pageable pageable) {
-        return ResponseEntity.ok(service.getAll(pageable));
+    @GetMapping("/all{id}")
+    public ResponseEntity<Page<EventDto>> getAll(@PathVariable int id, Pageable pageable) {
+        Pageable page = PageRequest.of(id, 12);
+        return ResponseEntity.ok(eventService.getAll(page));
     }
 
     @PostMapping
     public ResponseEntity<EventDto> create(@Validated(value = Validation.New.class) @RequestBody EventDto dto)
             throws JsonProcessingException {
-        return ResponseEntity.ok(service.create(dto));
+        return ResponseEntity.ok(eventService.create(dto));
     }
 
     @PutMapping
     public ResponseEntity<EventDto> update(@Validated(value = Validation.Exists.class) @RequestBody EventDto dto)
             throws JsonProcessingException {
-        return ResponseEntity.ok(service.update(dto));
+        return ResponseEntity.ok(eventService.update(dto));
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Boolean> delete(@PathVariable Long id) {
-        return ResponseEntity.ok(service.delete(id));
+        return ResponseEntity.ok(eventService.delete(id));
     }
 }
