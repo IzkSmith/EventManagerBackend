@@ -36,7 +36,7 @@ public class EventController {
 
     @GetMapping("/all{id}")
     public ResponseEntity<Page<EventDto>> getAll(@PathVariable int id, Pageable pageable) {
-        Pageable page = PageRequest.of(id, 12);
+        Pageable page = PageRequest.of(id, 10);
         return ResponseEntity.ok(eventService.getAll(page));
     }
 

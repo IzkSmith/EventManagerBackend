@@ -18,6 +18,9 @@ public class EventDto extends AbstractDto {
     private Long cityId;
 
     @NotNull(groups = {Validation.New.class})
+    private Long holderId;
+
+    @NotNull(groups = {Validation.New.class})
     private String date;
 
     @NotNull(groups = {Validation.New.class})

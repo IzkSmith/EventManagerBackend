@@ -4296,3 +4296,35 @@ VALUES
 (2,2),
 (3,3),
 (1,2) [42000-197]
+2019-10-15 11:52:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Значение слишком длинное для поля """DESCRIPTION"" VARCHAR(2048) NOT NULL": "STRINGDECODE('The Lumi\u00e8re Brothers Photography Centre opens a new season with an anniversary Vladimir Lagrange exhibition. ... (14120)"
+Value too long for column """DESCRIPTION"" VARCHAR(2048) NOT NULL": "STRINGDECODE('The Lumi\u00e8re Brothers Photography Centre opens a new season with an anniversary Vladimir Lagrange exhibition. ... (14120)"; SQL statement:
+insert into event (id, created, status, city_id, date, description, holder_id, max_members, name) values (null, ?, ?, ?, ?, ?, ?, ?, ?) [22001-199]
+2019-10-15 11:52:29 jdbc[6]: exception
+org.h2.jdbc.JdbcSQLDataException: Значение слишком длинное для поля """DESCRIPTION"" VARCHAR(2048) NOT NULL": "STRINGDECODE('The Lumi\u00e8re Brothers Photography Centre opens a new season with an anniversary Vladimir Lagrange exhibition. ... (12741)"
+Value too long for column """DESCRIPTION"" VARCHAR(2048) NOT NULL": "STRINGDECODE('The Lumi\u00e8re Brothers Photography Centre opens a new season with an anniversary Vladimir Lagrange exhibition. ... (12741)"; SQL statement:
+insert into event (id, created, status, city_id, date, description, holder_id, max_members, name) values (null, ?, ?, ?, ?, ?, ?, ?, ?) [22001-199]
+2019-10-15 11:52:44 jdbc[7]: exception
+org.h2.jdbc.JdbcSQLDataException: Значение слишком длинное для поля """DESCRIPTION"" VARCHAR(2048) NOT NULL": "STRINGDECODE('The Lumi\u00e8re Brothers Photography Centre opens a new season with an anniversary Vladimir Lagrange exhibition. ... (7142)"
+Value too long for column """DESCRIPTION"" VARCHAR(2048) NOT NULL": "STRINGDECODE('The Lumi\u00e8re Brothers Photography Centre opens a new season with an anniversary Vladimir Lagrange exhibition. ... (7142)"; SQL statement:
+insert into event (id, created, status, city_id, date, description, holder_id, max_members, name) values (null, ?, ?, ?, ?, ?, ?, ?, ?) [22001-199]
+2019-10-15 11:52:59 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLDataException: Значение слишком длинное для поля """DESCRIPTION"" VARCHAR(2048) NOT NULL": "STRINGDECODE('The Lumi\u00e8re Brothers Photography Centre opens a new season with an anniversary Vladimir Lagrange exhibition. ... (4305)"
+Value too long for column """DESCRIPTION"" VARCHAR(2048) NOT NULL": "STRINGDECODE('The Lumi\u00e8re Brothers Photography Centre opens a new season with an anniversary Vladimir Lagrange exhibition. ... (4305)"; SQL statement:
+insert into event (id, created, status, city_id, date, description, holder_id, max_members, name) values (null, ?, ?, ?, ?, ?, ?, ?, ?) [22001-199]
+2019-10-15 11:53:40 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLDataException: Значение слишком длинное для поля """DESCRIPTION"" VARCHAR(2048) NOT NULL": "STRINGDECODE('The Lumi\u00e8re Brothers Photography Centre opens a new season with an anniversary Vladimir Lagrange exhibition. ... (2120)"
+Value too long for column """DESCRIPTION"" VARCHAR(2048) NOT NULL": "STRINGDECODE('The Lumi\u00e8re Brothers Photography Centre opens a new season with an anniversary Vladimir Lagrange exhibition. ... (2120)"; SQL statement:
+insert into event (id, created, status, city_id, date, description, holder_id, max_members, name) values (null, ?, ?, ?, ?, ?, ?, ?, ?) [22001-199]
+2019-10-15 12:26:21 jdbc[15]: exception
+org.h2.jdbc.JdbcSQLDataException: Значение слишком длинное для поля """DESCRIPTION"" VARCHAR(2048) NOT NULL": "STRINGDECODE('The Lumi\u00e8re Brothers Photography Centre opens a new season with an anniversary Vladimir Lagrange exhibition. ... (2500)"
+Value too long for column """DESCRIPTION"" VARCHAR(2048) NOT NULL": "STRINGDECODE('The Lumi\u00e8re Brothers Photography Centre opens a new season with an anniversary Vladimir Lagrange exhibition. ... (2500)"; SQL statement:
+insert into event (id, created, status, city_id, date, description, holder_id, max_members, name) values (null, ?, ?, ?, ?, ?, ?, ?, ?) [22001-199]
+2019-10-15 12:26:46 jdbc[15]: exception
+org.h2.jdbc.JdbcSQLDataException: Значение слишком длинное для поля """DESCRIPTION"" VARCHAR(2048) NOT NULL": "STRINGDECODE('The Lumi\u00e8re Brothers Photography Centre opens a new season with an anniversary Vladimir Lagrange exhibition. ... (2250)"
+Value too long for column """DESCRIPTION"" VARCHAR(2048) NOT NULL": "STRINGDECODE('The Lumi\u00e8re Brothers Photography Centre opens a new season with an anniversary Vladimir Lagrange exhibition. ... (2250)"; SQL statement:
+insert into event (id, created, status, city_id, date, description, holder_id, max_members, name) values (null, ?, ?, ?, ?, ?, ?, ?, ?) [22001-199]
+2019-10-15 12:27:07 jdbc[14]: exception
+org.h2.jdbc.JdbcSQLDataException: Значение слишком длинное для поля """DESCRIPTION"" VARCHAR(2048) NOT NULL": "STRINGDECODE('The Lumi\u00e8re Brothers Photography Centre opens a new season with an anniversary Vladimir Lagrange exhibition. ... (2125)"
+Value too long for column """DESCRIPTION"" VARCHAR(2048) NOT NULL": "STRINGDECODE('The Lumi\u00e8re Brothers Photography Centre opens a new season with an anniversary Vladimir Lagrange exhibition. ... (2125)"; SQL statement:
+insert into event (id, created, status, city_id, date, description, holder_id, max_members, name) values (null, ?, ?, ?, ?, ?, ?, ?, ?) [22001-199]

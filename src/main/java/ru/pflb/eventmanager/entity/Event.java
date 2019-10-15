@@ -27,6 +27,7 @@ public class Event extends AbstractEntity {
     private String date;
     private int maxMembers;
     private String description;
+    private Long holderId;
 
     @ManyToOne
     private City city;
