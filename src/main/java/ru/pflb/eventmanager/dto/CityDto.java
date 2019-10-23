@@ -3,7 +3,6 @@ package ru.pflb.eventmanager.dto;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import ru.pflb.eventmanager.transfer.Validation;
-
 import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;

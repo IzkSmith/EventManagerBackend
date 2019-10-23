@@ -6,6 +6,7 @@ import org.springframework.data.domain.Pageable;
 import ru.pflb.eventmanager.dto.RoleDto;
 
 public interface RoleService {
+
     RoleDto create(RoleDto dto) throws JsonProcessingException;
 
     RoleDto update(RoleDto dto) throws JsonProcessingException;

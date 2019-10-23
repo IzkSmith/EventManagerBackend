@@ -6,8 +6,8 @@ import org.springframework.data.domain.Pageable;
 import ru.pflb.eventmanager.dto.UserDto;
 import ru.pflb.eventmanager.entity.User;
 
-
 public interface UserService {
+
     User register(User user);
 
     User findByUsername(String username);

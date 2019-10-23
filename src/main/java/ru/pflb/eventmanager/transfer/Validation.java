@@ -1,6 +1,7 @@
 package ru.pflb.eventmanager.transfer;
 
 public interface Validation {
+
     interface New {
 
     }

@@ -1,15 +1,14 @@
 package ru.pflb.eventmanager.mapper.impl;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import ru.pflb.eventmanager.dto.EventDto;
-import ru.pflb.eventmanager.dto.UserDto;
 import ru.pflb.eventmanager.entity.Event;
 import ru.pflb.eventmanager.entity.User;
 import ru.pflb.eventmanager.mapper.AbstractMapper;
 import ru.pflb.eventmanager.mapper.Mapper;
 import ru.pflb.eventmanager.repository.CityRepository;
 import ru.pflb.eventmanager.repository.UserRepository;
-
 import javax.annotation.PostConstruct;
 import java.util.Objects;
 import java.util.stream.Collectors;
@@ -17,6 +16,7 @@ import java.util.stream.Collectors;
 @Component
 @Mapper(entity = Event.class, dto = EventDto.class)
 public class EventMapper extends AbstractMapper<Event, EventDto> {
+
     private final CityRepository cityRepository;
     private final UserRepository userRepository;
 

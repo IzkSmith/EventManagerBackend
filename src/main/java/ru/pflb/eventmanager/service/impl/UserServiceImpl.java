@@ -9,7 +9,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import ru.pflb.eventmanager.dto.UserDto;
-import ru.pflb.eventmanager.entity.Status;
+import ru.pflb.eventmanager.enumeration.Status;
 import ru.pflb.eventmanager.entity.User;
 import ru.pflb.eventmanager.exception.DataBaseException;
 import ru.pflb.eventmanager.mapper.impl.UserMapper;
@@ -33,14 +33,10 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User register(User user){
-
         user.setPassword(passwordEncoder.encode(user.getPassword()));
         user.setStatus(Status.ACTIVE);
-
         User registeredUser = userRepository.save(user);
-
         log.info("IN register - user: {} succesfully registered", registeredUser);
-
         return registeredUser;
     }
 
@@ -89,7 +85,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public boolean delete(Long id) {
         userRepository.deleteById(id);
-        boolean deleted = !userRepository.findById(id).isPresent();
+        boolean deleted = userRepository.findById(id).isEmpty();
         if (deleted) {
             log.info("User deleted by ID: {}", id);
         }

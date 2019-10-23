@@ -13,12 +13,12 @@ import ru.pflb.eventmanager.exception.DataBaseException;
 import ru.pflb.eventmanager.mapper.impl.RoleMapper;
 import ru.pflb.eventmanager.repository.RoleRepository;
 import ru.pflb.eventmanager.service.RoleService;
-
 import java.util.stream.Collectors;
 
 @Slf4j
 @Service
 public class RoleServiceImpl implements RoleService {
+
     private final RoleRepository repository ;
     private final RoleMapper mapper;
 
@@ -66,7 +66,7 @@ public class RoleServiceImpl implements RoleService {
     @Override
     public boolean delete(Long id) {
         repository.deleteById(id);
-        boolean deleted = !repository.findById(id).isPresent();
+        boolean deleted = repository.findById(id).isEmpty();
         if (deleted) {
             log.info("Role deleted by ID: {}", id);
         }

@@ -1,4 +1,4 @@
-package ru.pflb.eventmanager.rest.controller;
+package ru.pflb.eventmanager.controller;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import org.springframework.data.domain.Page;
@@ -24,6 +24,7 @@ import ru.pflb.eventmanager.transfer.Validation;
 @RestController
 @RequestMapping("/api/v1/user")
 public class UserController {
+
     private final UserService userService;
 
     public UserController( UserService service) {
@@ -40,9 +41,15 @@ public class UserController {
         return ResponseEntity.ok(userService.getAll(pageable));
     }
 
-    @PostMapping
+    @PostMapping("/register")
     public ResponseEntity<User> register(@Validated(value = Validation.New.class) @RequestBody User dto) {
         return ResponseEntity.ok(userService.register(dto));
+    }
+
+    @PostMapping()
+    public ResponseEntity<UserDto> create(@Validated(value = Validation.New.class) @RequestBody UserDto dto)
+            throws JsonProcessingException{
+        return ResponseEntity.ok(userService.create(dto));
     }
 
     @PutMapping

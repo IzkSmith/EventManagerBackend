@@ -1,4 +1,4 @@
-package ru.pflb.eventmanager.rest.controller;
+package ru.pflb.eventmanager.controller;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import org.springframework.data.domain.Page;
@@ -14,39 +14,39 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import ru.pflb.eventmanager.dto.CityDto;
-import ru.pflb.eventmanager.service.CityService;
+import ru.pflb.eventmanager.dto.RoleDto;
+import ru.pflb.eventmanager.service.RoleService;
 import ru.pflb.eventmanager.transfer.Validation;
 
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
-@RequestMapping("/api/v1/city")
-public class CityController {
+@RequestMapping("/api/v1/role")
+public class RoleController {
 
-    private final CityService service;
+    private final RoleService service;
 
-    public CityController(CityService service) {
+    public RoleController(RoleService service) {
         this.service = service;
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<CityDto> get(@PathVariable Long id) {
+    public ResponseEntity<RoleDto> get(@PathVariable Long id) {
         return ResponseEntity.ok(service.get(id));
     }
 
     @GetMapping("/all")
-     public ResponseEntity<Page<CityDto>> getAll(Pageable pageable) {
+    public ResponseEntity<Page<RoleDto>> getAll(Pageable pageable) {
         return ResponseEntity.ok(service.getAll(pageable));
     }
 
     @PostMapping
-    public ResponseEntity<CityDto> create(@Validated(value = Validation.New.class) @RequestBody CityDto dto)
+    public ResponseEntity<RoleDto> create(@Validated(value = Validation.New.class) @RequestBody RoleDto dto)
             throws JsonProcessingException {
         return ResponseEntity.ok(service.create(dto));
     }
 
     @PutMapping
-    public ResponseEntity<CityDto> update(@Validated(value = Validation.Exists.class) @RequestBody CityDto dto)
+    public ResponseEntity<RoleDto> update(@Validated(value = Validation.Exists.class) @RequestBody RoleDto dto)
             throws JsonProcessingException {
         return ResponseEntity.ok(service.update(dto));
     }
@@ -57,4 +57,3 @@ public class CityController {
     }
 
 }
-

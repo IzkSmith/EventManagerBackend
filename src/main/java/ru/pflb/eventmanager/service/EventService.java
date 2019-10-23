@@ -6,6 +6,7 @@ import org.springframework.data.domain.Pageable;
 import ru.pflb.eventmanager.dto.EventDto;
 
 public interface EventService {
+
     EventDto create(EventDto dto) throws JsonProcessingException;
 
     EventDto update(EventDto dto) throws JsonProcessingException;

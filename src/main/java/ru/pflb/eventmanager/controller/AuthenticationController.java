@@ -1,4 +1,4 @@
-package ru.pflb.eventmanager.rest.controller;
+package ru.pflb.eventmanager.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -17,7 +17,6 @@ import ru.pflb.eventmanager.entity.Role;
 import ru.pflb.eventmanager.entity.User;
 import ru.pflb.eventmanager.security.jwt.JwtTokenProvider;
 import ru.pflb.eventmanager.service.UserService;
-
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -60,11 +59,12 @@ public class AuthenticationController {
                 roles.add(new Long(2));
             }
 
-
             Map<Object, Object> response = new HashMap<>();
             response.put("username", username);
             response.put("token", token);
             response.put("roles", roles);
+            response.put("firstName", user.getFirstName());
+            response.put("lastName", user.getLastName());
             response.put("id", user.getId());
 
             return ResponseEntity.ok(response);

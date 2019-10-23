@@ -6,6 +6,7 @@ import org.springframework.data.domain.Pageable;
 import ru.pflb.eventmanager.dto.CityDto;
 
 public interface CityService {
+
     CityDto create(CityDto dto) throws JsonProcessingException;
 
     CityDto update(CityDto dto) throws JsonProcessingException;

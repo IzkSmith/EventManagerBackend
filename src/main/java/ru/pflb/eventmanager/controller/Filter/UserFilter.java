@@ -1,7 +1,6 @@
-package ru.pflb.eventmanager.rest.controller;
+package ru.pflb.eventmanager.controller.Filter;
 
 import org.springframework.stereotype.Component;
-
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
 import javax.servlet.FilterConfig;
@@ -12,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @Component
-public class CityFilter implements Filter {
+public class UserFilter implements Filter {
 
     @Override
     public void init(FilterConfig filterConfig) {}
@@ -20,7 +19,7 @@ public class CityFilter implements Filter {
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
         var httpServletResponse = (HttpServletResponse) servletResponse;
-        httpServletResponse.setHeader("X-SUPERHERO-APP", "super-header");
+        httpServletResponse.setHeader("","");
         filterChain.doFilter(servletRequest, servletResponse);
     }
 

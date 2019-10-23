@@ -1,12 +1,10 @@
 package ru.pflb.eventmanager.security.jwt;
 
-
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import ru.pflb.eventmanager.entity.Role;
-import ru.pflb.eventmanager.entity.Status;
+import ru.pflb.eventmanager.enumeration.Status;
 import ru.pflb.eventmanager.entity.User;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;

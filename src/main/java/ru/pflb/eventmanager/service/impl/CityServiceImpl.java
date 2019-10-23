@@ -13,9 +13,7 @@ import ru.pflb.eventmanager.exception.DataBaseException;
 import ru.pflb.eventmanager.mapper.impl.CityMapper;
 import ru.pflb.eventmanager.repository.CityRepository;
 import ru.pflb.eventmanager.service.CityService;
-
 import java.util.stream.Collectors;
-
 
 @Slf4j
 @Service
@@ -68,7 +66,7 @@ public class CityServiceImpl implements CityService {
     @Override
     public boolean delete(Long id) {
         repository.deleteById(id);
-        boolean deleted = !repository.findById(id).isPresent();
+        boolean deleted = repository.findById(id).isEmpty();
         if (deleted) {
             log.info("City deleted by ID: {}", id);
         }

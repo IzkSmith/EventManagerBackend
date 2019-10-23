@@ -8,7 +8,6 @@ import ru.pflb.eventmanager.entity.User;
 import ru.pflb.eventmanager.mapper.AbstractMapper;
 import ru.pflb.eventmanager.mapper.Mapper;
 import ru.pflb.eventmanager.repository.RoleRepository;
-
 import javax.annotation.PostConstruct;
 import java.util.Objects;
 import java.util.stream.Collectors;
@@ -16,12 +15,14 @@ import java.util.stream.Collectors;
 @Component
 @Mapper(entity = User.class, dto = UserDto.class)
 public class UserMapper extends AbstractMapper<User, UserDto> {
+
     private final RoleRepository roleRepository;
 
     @Autowired
     public UserMapper( RoleRepository roleRepository) {
         this.roleRepository = roleRepository;
     }
+
     @PostConstruct
     public void init() {
         mapper.createTypeMap(User.class, UserDto.class)
@@ -32,7 +33,6 @@ public class UserMapper extends AbstractMapper<User, UserDto> {
 
     @Override
     protected void mapSpecificFields(User source, UserDto destination) {
-
         if (source.getRoles() != null) {
             destination.getRoles().addAll(source.getRoles().stream().map(Role::getId).collect(Collectors.toList()));
         }
@@ -50,6 +50,4 @@ public class UserMapper extends AbstractMapper<User, UserDto> {
             );
         }
     }
-
-
 }

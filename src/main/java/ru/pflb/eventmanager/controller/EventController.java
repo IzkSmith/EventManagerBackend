@@ -1,4 +1,4 @@
-package ru.pflb.eventmanager.rest.controller;
+package ru.pflb.eventmanager.controller;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import org.springframework.data.domain.Page;
@@ -23,6 +23,7 @@ import ru.pflb.eventmanager.transfer.Validation;
 @RestController
 @RequestMapping("/api/v1/event")
 public class EventController {
+
     private final EventService eventService;
 
     public EventController(EventService eventService) {

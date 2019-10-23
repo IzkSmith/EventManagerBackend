@@ -1,11 +1,23 @@
 package ru.pflb.eventmanager.entity;
-import lombok.Data;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
+import javax.persistence.Table;
 import java.util.List;
 
-@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Table(name = "ROLE")
+@Getter
+@Setter
+@ToString
 @Entity
 public class Role extends AbstractEntity{
 
@@ -14,12 +26,5 @@ public class Role extends AbstractEntity{
 
     @ManyToMany(mappedBy = "roles")
     private List<User> users;
-
-    @Override
-    public String toString() {
-        return "Role{" +
-                "id: " + super.getId() + ", " +
-                "name: " + name + "}";
-    }
 
 }
