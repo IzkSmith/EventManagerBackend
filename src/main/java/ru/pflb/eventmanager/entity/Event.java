@@ -22,6 +22,7 @@ import java.util.List;
 @Table(name = "EVENT")
 @Getter
 @Setter
+@ToString
 @Entity
 public class Event extends AbstractEntity {
 
@@ -51,16 +52,4 @@ public class Event extends AbstractEntity {
     )
     private List<User> users =new ArrayList<>();
 
-    @Override
-    public String toString() {
-        return "Event{" +
-                "name='" + name + '\'' +
-                ", date='" + date + '\'' +
-                ", maxMembers=" + maxMembers +
-                ", description='" + description + '\'' +
-                ", holderId=" + holderId +
-                ", city=" + city +
-                ", users=" + users +
-                '}';
-    }
 }

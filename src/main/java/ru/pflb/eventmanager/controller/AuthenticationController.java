@@ -54,7 +54,6 @@ public class AuthenticationController {
             String token = jwtTokenProvider.createToken(username, user.getRoles());
 
             List<Long> roles= user.getRoles().stream().map(Role::getId).collect(Collectors.toList());
-            roles.add(new Long(3));
             if(roles.contains(new Long (1))) {
                 roles.add(new Long(2));
             }

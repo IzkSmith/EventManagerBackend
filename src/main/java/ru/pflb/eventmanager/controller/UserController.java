@@ -47,8 +47,7 @@ public class UserController {
     }
 
     @PostMapping()
-    public ResponseEntity<UserDto> create(@Validated(value = Validation.New.class) @RequestBody UserDto dto)
-            throws JsonProcessingException{
+    public ResponseEntity<UserDto> create(@Validated(value = Validation.New.class) @RequestBody UserDto dto) {
         return ResponseEntity.ok(userService.create(dto));
     }
 

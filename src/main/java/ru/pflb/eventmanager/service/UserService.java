@@ -12,7 +12,7 @@ public interface UserService {
 
     User findByUsername(String username);
 
-    UserDto create(UserDto dto) throws JsonProcessingException;
+    UserDto create(UserDto dto);
 
     UserDto update(UserDto dto) throws JsonProcessingException;
 

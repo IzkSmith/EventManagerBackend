@@ -9,12 +9,16 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import ru.pflb.eventmanager.dto.UserDto;
-import ru.pflb.eventmanager.enumeration.Status;
+import ru.pflb.eventmanager.entity.Role;
 import ru.pflb.eventmanager.entity.User;
+import ru.pflb.eventmanager.enumeration.Status;
 import ru.pflb.eventmanager.exception.DataBaseException;
 import ru.pflb.eventmanager.mapper.impl.UserMapper;
 import ru.pflb.eventmanager.repository.UserRepository;
 import ru.pflb.eventmanager.service.UserService;
+
+import java.util.ArrayList;
+import java.util.List;
 import java.util.stream.Collectors;
 
 @Slf4j
@@ -43,15 +47,15 @@ public class UserServiceImpl implements UserService {
     @Override
     public User findByUsername(String username) {
         User result = userRepository.findByUsername(username);
-        log.info("IN findByUsername - user: {} found by username: {}", result, username);
+        log.info("IN findByUsername -  found by username: {}", username);
         return result;
     }
 
     @Override
-    public UserDto create(UserDto dto) throws JsonProcessingException {
-        UserDto userDto = mapper.toDto(userRepository.save(mapper.toEntity(dto)));
-        log.info("New User saved: {}", new ObjectMapper().writeValueAsString(userDto));
-        return userDto;
+    public UserDto create(UserDto user) {
+        UserDto registeredUser = mapper.toDto(userRepository.save(mapper.toEntity(user)));
+        log.info("IN register - user: {} succesfully registered", registeredUser.getUsername());
+        return registeredUser;
     }
 
     @Override
