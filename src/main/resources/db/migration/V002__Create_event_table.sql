@@ -5,6 +5,7 @@ CREATE TABLE EVENT
     name VARCHAR(255) NOT NULL,
     max_members INT NOT NULL,
     description VARCHAR(2048) NOT NULL,
+    contacts VARCHAR(2048) NOT NULL,
     city_id BIGINT NOT NULL,
     holder_id BIGINT NOT NULL,
     created TIMESTAMP,

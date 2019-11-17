@@ -38,7 +38,7 @@ public class CityServiceImpl implements CityService {
     @Override
     public CityDto update(CityDto dto) throws JsonProcessingException {
         City city = repository.findById(dto.getId())
-                .orElseThrow(() -> new DataBaseException(String.format("Пользователь с ID %d не существует.", dto.getId())));
+                .orElseThrow(() -> new DataBaseException(String.format("Город с ID %d не существует.", dto.getId())));
         CityDto cityDto = mapper.toDto(repository.save(mapper.toEntity(dto, city)));
         log.info("New City saved: {}", new ObjectMapper().writeValueAsString(cityDto));
         return cityDto;
@@ -47,7 +47,7 @@ public class CityServiceImpl implements CityService {
     @Override
     public CityDto get(Long id){
         return mapper.toDto(repository.findById(id)
-                .orElseThrow(() -> new DataBaseException(String.format("Пользователь с ID %d не существует.", id))));
+                .orElseThrow(() -> new DataBaseException(String.format("Город с ID %d не существует.", id))));
     }
 
     @Override

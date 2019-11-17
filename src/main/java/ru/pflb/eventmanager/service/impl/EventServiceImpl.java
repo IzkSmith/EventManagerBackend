@@ -38,7 +38,7 @@ public class EventServiceImpl implements EventService {
     @Override
     public EventDto update(EventDto dto) throws JsonProcessingException {
         Event event = repository.findById(dto.getId())
-                .orElseThrow(() -> new DataBaseException(String.format("Пользователь с ID %d не существует.", dto.getId())));
+                .orElseThrow(() -> new DataBaseException(String.format("Event с ID %d не существует.", dto.getId())));
         EventDto eventDTO = mapper.toDto(repository.save(mapper.toEntity(dto, event)));
         log.info("New Event saved: {}", new ObjectMapper().writeValueAsString(eventDTO));
         return eventDTO;
@@ -47,7 +47,7 @@ public class EventServiceImpl implements EventService {
     @Override
     public EventDto get(Long id){
         return mapper.toDto(repository.findById(id)
-                .orElseThrow(() -> new DataBaseException(String.format("Пользователь с ID %d не существует.", id))));
+                .orElseThrow(() -> new DataBaseException(String.format("Event с ID %d не существует.", id))));
     }
 
     @Override

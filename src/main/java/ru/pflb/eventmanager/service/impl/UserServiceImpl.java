@@ -3,13 +3,13 @@ package ru.pflb.eventmanager.service.impl;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import ru.pflb.eventmanager.dto.UserDto;
-import ru.pflb.eventmanager.entity.Role;
 import ru.pflb.eventmanager.entity.User;
 import ru.pflb.eventmanager.enumeration.Status;
 import ru.pflb.eventmanager.exception.DataBaseException;
@@ -17,14 +17,14 @@ import ru.pflb.eventmanager.mapper.impl.UserMapper;
 import ru.pflb.eventmanager.repository.UserRepository;
 import ru.pflb.eventmanager.service.UserService;
 
-import java.util.ArrayList;
-import java.util.List;
+
 import java.util.stream.Collectors;
 
 @Slf4j
 @Service
 public class UserServiceImpl implements UserService {
 
+    @Autowired
     private final UserRepository userRepository;;
     private final UserMapper mapper;
     private final BCryptPasswordEncoder passwordEncoder;
@@ -46,9 +46,8 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User findByUsername(String username) {
-        User result = userRepository.findByUsername(username);
         log.info("IN findByUsername -  found by username: {}", username);
-        return result;
+        return userRepository.findByUsername(username);
     }
 
     @Override

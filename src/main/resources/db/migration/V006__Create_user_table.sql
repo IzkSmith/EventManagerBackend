@@ -6,6 +6,7 @@ CREATE TABLE USER
     last_name VARCHAR(255),
     password VARCHAR(255) NOT NULL,
     username VARCHAR(255) UNIQUE NOT NULL,
+    wants_new_role BOOLEAN,
     created TIMESTAMP,
     status VARCHAR(255),
     updated TIMESTAMP,

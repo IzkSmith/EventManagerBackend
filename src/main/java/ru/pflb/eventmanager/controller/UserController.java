@@ -1,6 +1,7 @@
 package ru.pflb.eventmanager.controller;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
@@ -25,6 +26,7 @@ import ru.pflb.eventmanager.transfer.Validation;
 @RequestMapping("/api/v1/user")
 public class UserController {
 
+    @Autowired
     private final UserService userService;
 
     public UserController( UserService service) {

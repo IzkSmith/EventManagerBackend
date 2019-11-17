@@ -50,4 +50,7 @@ public class User extends AbstractEntity {
     )
     private List<Role> roles = new ArrayList<>();
 
+    @Column(name = "wantsNewRole")
+    private boolean wantsNewRole;
+
 }

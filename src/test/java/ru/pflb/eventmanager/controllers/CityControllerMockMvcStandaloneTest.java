@@ -11,16 +11,13 @@ import org.springframework.boot.test.json.JacksonTester;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import ru.pflb.eventmanager.controller.CityController;
-import ru.pflb.eventmanager.controller.ExceptionHandler.CityExceptionHandler;
 import ru.pflb.eventmanager.controller.Filter.CityFilter;
 import ru.pflb.eventmanager.dto.CityDto;
-import ru.pflb.eventmanager.dto.EventDto;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.mock.web.MockHttpServletResponse;
 import ru.pflb.eventmanager.service.CityService;
-import java.util.ArrayList;
-import java.util.List;
+
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.BDDMockito.given;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
@@ -47,23 +44,22 @@ public class CityControllerMockMvcStandaloneTest {
         JacksonTester.initFields(this, new ObjectMapper());
         // MockMvc standalone approach
         mvc = MockMvcBuilders.standaloneSetup(cityController)
-                .setControllerAdvice(new CityExceptionHandler())
+//                .setControllerAdvice(new CityExceptionHandler())
                 .addFilters(new CityFilter())
                 .build();
     }
 
     @Test
     public void canRetrieveByIdWhenExists() throws Exception {
-        long l=2;
         CityDto dto = new CityDto();
+        dto.setId(1L);
         dto.setName("test");
 
-        given(cityService.get(l))
-                .willReturn(dto);
+        given(cityService.get(1L)).willReturn(dto);
 
         // when
         MockHttpServletResponse response = mvc.perform(
-                get("http://localhost:8080/api/v1/city/2")
+                get("http://localhost:8080/api/v1/city/1")
                         .accept(MediaType.APPLICATION_JSON))
                 .andReturn().getResponse();
 

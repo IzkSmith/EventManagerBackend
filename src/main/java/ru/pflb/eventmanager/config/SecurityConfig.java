@@ -1,8 +1,6 @@
 package ru.pflb.eventmanager.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.security.oauth2.client.EnableOAuth2Sso;
-import org.springframework.boot.autoconfigure.security.oauth2.resource.PrincipalExtractor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -11,8 +9,6 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import ru.pflb.eventmanager.entity.User;
-import ru.pflb.eventmanager.repository.UserRepository;
 import ru.pflb.eventmanager.security.jwt.JwtConfigurer;
 import ru.pflb.eventmanager.security.jwt.JwtTokenProvider;
 
@@ -64,38 +60,5 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .apply(new JwtConfigurer(jwtTokenProvider));
     }
-/*
-    @Bean
-    public PrincipalExtractor principalExtractor(UserRepository userRepository) {
-        return map -> {
-            String id = (String)map.get("sub");
-
-            if (userRepository.findByUsername(id) == null){
-                User newUser = new User();
-
-                String name = (String) map.get("name");
-                String lastName = "";
-                String firstName= "";
-                if(name.split("\\w+").length>1){
-
-                    lastName = name.substring(name.lastIndexOf(" ")+1);
-                    firstName = name.substring(0, name.lastIndexOf(' '));
-                }
-                else{
-                    firstName = name;
-                }
-                newUser.setFirstName(firstName);
-                newUser.setLastName(lastName);
-                newUser.setEmail((String) map.get("email"));
-                newUser.setUsername(id);
-                newUser.setPassword(passwordEncoder.encode(id));
-
-                return userRepository.save(newUser);
-            }else{
-                User user = userRepository.findByUsername(id);
-                return userRepository.save(user);
-            }
-        };
-    }*/
 }
 

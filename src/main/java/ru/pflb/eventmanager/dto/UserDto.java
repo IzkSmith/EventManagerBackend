@@ -32,4 +32,7 @@ public class UserDto extends AbstractDto {
 
     @NotNull(groups = {Validation.New.class})
     private List<Long> roles = new ArrayList<>();
+
+    @NotNull(groups = {Validation.New.class})
+    private boolean wantsNewRole;
 }

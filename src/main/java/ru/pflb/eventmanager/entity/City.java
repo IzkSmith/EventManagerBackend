@@ -15,11 +15,11 @@ import java.util.List;
 
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "CITY")
 @Getter
 @Setter
 @ToString
 @Entity
+@Table(name = "CITY")
 public class City extends AbstractEntity {
 
     @Column(name = "name", unique = true)

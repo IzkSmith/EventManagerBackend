@@ -29,6 +29,9 @@ public class EventDto extends AbstractDto {
     @NotNull(groups = {Validation.New.class})
     private String description;
 
+    @NotNull(groups = {Validation.New.class})
+    private String contacts;
+
     private List<Long> userIds = new ArrayList<>();
 }
 

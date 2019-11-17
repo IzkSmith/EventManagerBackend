@@ -41,6 +41,9 @@ public class Event extends AbstractEntity {
     @Column(name = "holder_id", length = 1000)
     private Long holderId;
 
+    @Column(name = "contacts", length = 1000)
+    private String contacts;
+
     @ManyToOne
     @JoinColumn(name = "city_id")
     private City city;

@@ -2,6 +2,7 @@ package ru.pflb.eventmanager.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -54,8 +55,8 @@ public class AuthenticationController {
             String token = jwtTokenProvider.createToken(username, user.getRoles());
 
             List<Long> roles= user.getRoles().stream().map(Role::getId).collect(Collectors.toList());
-            if(roles.contains(new Long (1))) {
-                roles.add(new Long(2));
+            if(roles.contains(1L)) {
+                roles.add(2L);
             }
 
             Map<Object, Object> response = new HashMap<>();
