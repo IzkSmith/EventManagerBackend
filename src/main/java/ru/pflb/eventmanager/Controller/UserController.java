@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -39,6 +40,7 @@ public class UserController {
     }
 
     @GetMapping("/all")
+    @Secured("ROLE_ADMIN")
     public ResponseEntity<Page<UserDto>> getAll(Pageable pageable) {
         return ResponseEntity.ok(userService.getAll(pageable));
     }

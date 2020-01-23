@@ -13,8 +13,8 @@ import org.springframework.http.MediaType;
 import org.springframework.mock.web.MockHttpServletResponse;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
-import ru.pflb.eventmanager.dto.EventDto;
-import ru.pflb.eventmanager.service.EventService;
+import ru.pflb.eventmanager.dto.RoleDto;
+import ru.pflb.eventmanager.service.RoleService;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.BDDMockito.given;
@@ -22,16 +22,16 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 
 @RunWith(MockitoJUnitRunner.class)
-public class EventControllerMockMvcStandaloneTest {
+public class RoleContorollerMockMvcStandaloneTest {
     private MockMvc mvc;
 
     @Mock
-    private EventService eventService;
+    private RoleService roleService;
 
     @InjectMocks
-    private ru.pflb.eventmanager.controller.EventController eventController;
+    private ru.pflb.eventmanager.controller.RoleController roleController;
 
-    private JacksonTester<EventDto> jsonEvent;
+    private JacksonTester<RoleDto> jsonRole;
 
     @Before
     public void setup() {
@@ -40,49 +40,42 @@ public class EventControllerMockMvcStandaloneTest {
         // Initializes the JacksonTester
         JacksonTester.initFields(this, new ObjectMapper());
         // MockMvc standalone approach
-        mvc = MockMvcBuilders.standaloneSetup(eventController)
-//                .setControllerAdvice(new EventExceptionHandler())
-                .addFilters(new ru.pflb.eventmanager.controller.Filter.EventFilter())
+        mvc = MockMvcBuilders.standaloneSetup(roleController)
+//                .setControllerAdvice(new RoleExceptionHandler())
+                .addFilters(new ru.pflb.eventmanager.controller.Filter.RoleFilter())
                 .build();
     }
 
     @Test
     public void canRetrieveByIdWhenExists() throws Exception {
-        EventDto dto = new EventDto();
+        RoleDto dto = new RoleDto();
         dto.setId(1L);
         dto.setName("test");
 
-        given(eventService.get(1L)).willReturn(dto);
+        given(roleService.get(1L)).willReturn(dto);
 
         // when
         MockHttpServletResponse response = mvc.perform(
-                get("http://localhost:8080/api/v1/event/1")
+                get("http://localhost:8080/api/v1/role/1")
                         .accept(MediaType.APPLICATION_JSON))
                 .andReturn().getResponse();
 
         // then
         assertThat(response.getStatus()).isEqualTo(HttpStatus.OK.value());
         assertThat(response.getContentAsString()).isEqualTo(
-                jsonEvent.write(dto).getJson()
+                jsonRole.write(dto).getJson()
         );
     }
 
     @Test
-    public void canCreateANewEvent() throws Exception {
-        EventDto dto = new EventDto();
-        dto.setId(1L);
-        dto.setName("Евент");
-        dto.setCityId(1L);
-        dto.setHolderId(6L);
-        dto.setDescription("adsa");
-        dto.setMaxMembers(25);
-        dto.setDate("2019-12-08 12:15:41");
-        dto.setContacts("wasdas@gmail.com");
+    public void canCreateANewRole() throws Exception {
+        RoleDto dto = new RoleDto();
+        dto.setName("Саранск");
 
         // when
         MockHttpServletResponse response = mvc.perform(
-                post("http://localhost:8080/api/v1/event").contentType(MediaType.APPLICATION_JSON).content(
-                        jsonEvent.write(dto).getJson()
+                post("http://localhost:8080/api/v1/role").contentType(MediaType.APPLICATION_JSON).content(
+                        jsonRole.write(dto).getJson()
                 )).andReturn().getResponse();
 
         // then

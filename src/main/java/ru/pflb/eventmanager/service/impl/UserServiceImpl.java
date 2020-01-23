@@ -12,12 +12,12 @@ import org.springframework.stereotype.Service;
 import ru.pflb.eventmanager.dto.UserDto;
 import ru.pflb.eventmanager.entity.User;
 import ru.pflb.eventmanager.enumeration.Status;
-import ru.pflb.eventmanager.exception.DataBaseException;
 import ru.pflb.eventmanager.mapper.impl.UserMapper;
 import ru.pflb.eventmanager.repository.UserRepository;
 import ru.pflb.eventmanager.service.UserService;
 
 
+import javax.persistence.EntityNotFoundException;
 import java.util.stream.Collectors;
 
 @Slf4j
@@ -60,7 +60,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public UserDto update(UserDto dto) throws JsonProcessingException {
         User user = userRepository.findById(dto.getId())
-                .orElseThrow(() -> new DataBaseException(String.format("Пользователь с ID %d не существует.", dto.getId())));
+                .orElseThrow(() -> new EntityNotFoundException(String.format("Пользователь с ID %d не существует.", dto.getId())));
         UserDto userDto = mapper.toDto(userRepository.save(mapper.toEntity(dto, user)));
         log.info("New User saved: {}", new ObjectMapper().writeValueAsString(userDto));
         return userDto;
@@ -69,7 +69,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public UserDto get(Long id){
         return mapper.toDto(userRepository.findById(id)
-                .orElseThrow(() -> new DataBaseException(String.format("Пользователь с ID %d не существует.", id))));
+                .orElseThrow(() -> new EntityNotFoundException(String.format("Пользователь с ID %d не существует.", id))));
     }
 
     @Override

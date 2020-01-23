@@ -9,7 +9,7 @@ VALUES
  ' collections of the State Museum of Ceramics that was moved to the Kuskovo Museum Estate in 1932. In the ' ||
  '1920s–1930s, other private collections were added, but Alexei Morozov’s collection remains the largest.', 1, 1, 'holder1@gmail.com'),
 
-(2,'2019-10-02 15:00' ,
+(2,'2019-12-02 15:00' ,
  '‘Lagrange Streets’ in the Lumière Brothers Photography Centre',
  500,
  'The Lumière Brothers Photography Centre opens a new season with an anniversary Vladimir Lagrange exhibition.' ||
@@ -24,7 +24,7 @@ VALUES
  ' Traditions and Modernity. Three halls will host a display telling about the development of Russian jewellery for' ||
  ' three centuries — from the 18th century to the present day. ', 3, 1, 'holder1@gmail.com'),
 
-(4, '2019-11-04 10:30',
+(4, '2019-12-04 10:30',
  '''Moscow Theatres, Golden Mask Award Winners'' on Chistoprudny Boulevard!',
  1000,
  'The photo exhibition ''Moscow Theatres, Golden Mask Award Winners'' will open on Chistoprudny Boulevard featuring' ||
@@ -33,14 +33,14 @@ VALUES
  ' Nemirovich-Danchenko Music Theatre' ||
  ' and many others.', 4, 2, 'holder2@gmail.com'),
 
-(5,'2019-10-05 15:00' ,
+(5,'2020-01-05 15:00' ,
  'Ceramics Exhibition in Tsaritsyno Museum Reserve',
  500,
  'Small Palace of Tsaritsyno Museum Reserve is running the exhibition ''Shadow of a Woman'' as part of the Ceramics' ||
  ' in Tsaritsyno project.This ceramic art exhibition presents the collection of sculptures, figurines and decorative' ||
  ' compositions made by Soviet artists of the 1960s–1980s.', 5, 1, 'holder2@gmail.com'),
 
-(6, '2019-12-06 18:00',
+(6, '2020-02-06 18:00',
  'Historical tour of the Helikon Opera Theatre',
  2000,
  'Helikon Opera Moscow Music Theatre invites to join a historical tour.You will discover the history of the building' ||
@@ -48,7 +48,7 @@ VALUES
  'story about the famous theatre groups, and visit a unique exhibition at Zimin Lobby and Gallery.Also, visitors ' ||
  'will view new Stravinsky theatre hall. Free admission.', 6, 2, 'holder1@gmail.com'),
 
-(7, '2019-11-07 10:30',
+(7, '2020-03-07 10:30',
  '''Life Is a Long Run'' at Alexander Shilov Gallery',
  1000,
  'Alexander Shilov Gallery will host an exhibition ''Life Is a Long Run'' about the Russian peasantry.Visitors will' ||
@@ -56,7 +56,7 @@ VALUES
  ' understand the Russian character and capture life in authentic and realistic manner.Full ticket — RUB 200, ' ||
  'discount ticket — RUB 80.', 7, 1, 'holder2@gmail.com'),
 
-(8,'2019-10-08 15:00' ,
+(8,'2020-01-08 15:00' ,
  '“Iconography and Graphic Image of the Saviour” at Kolomenskoye Museum Reserve',
  500,
  'Visit the exhibition “Iconography and Graphic Image of the Saviour” at Church of St. George, Kolomenskoye Museum' ||
@@ -65,7 +65,7 @@ VALUES
  ' his image has always been of interest for Christians. So at first one of the main image types appeared - the Holy' ||
  ' Mandylion, then the Infant Jesus with Holy Virgin, Christ Emmanuel, Christ Pantocrator.', 8, 2, 'holder2@gmail.com'),
 
-(9, '2019-12-09 18:00',
+(9, '2020-03-09 18:00',
  '''Snow Policy'' exhibition in Tsaritsyno Museum Reserve',
  2000,
  'Tsaritsyno Museum Reserve invites to attend the exhibition and installation ''Snow Policy'' by the artist Sergei' ||
@@ -75,27 +75,27 @@ VALUES
  'its halls. It will be accompanied by real media reports about heavy snowfall voiced by soloist of Stanislavsky' ||
  ' Electro Theatre Alexei Kokhanov.', 9, 1, '+79851231231'),
 
-(10, '2019-11-10 10:30',
+(10, '2020-02-10 10:30',
  '''The World to Come: Ecology as a New Policy. 2030-2100'' at the Garage Museum',
  1000,
  'Visit the biggest exhibition of 2019, ''The World to Come: Ecology as a New Policy. 2030-2100'', at the Garage' ||
  ' Museum of Contemporary Art. The display will occupy the entire space of the Museum, with more than 50 artists' ||
  ' from Russia and other countries presenting their works.', 10, 2, 'holder1@gmail.com'),
 
-(11,'2019-10-11 15:00' ,
+(11,'2020-03-11 15:00' ,
  '''Style to Choose. Interiors of Historicism Era'' in Lyublino Museum Estate',
  500,
  'Pink Hall of Durasov Palace exhibition ''Style to Choose. Interiors of Historicism Era''. Visitors will learn how ' ||
  'the approach to interior decoration changed between the 1830s and the 1890s. The Museum will present the world of' ||
  'things that served as the background for dramatic scenes of literary works by Russian and European classics.', 11, 1, '+79851231231'),
 
-(12, '2019-12-12 18:00',
+(12, '2020-01-12 18:00',
  'Exhibition of Croatian artists at the Museum of Russian Lubok and Naïve Art',
  2000,
  'The Museum of Russian Lubok and Naïve Art will run the exhibition of Croatian artists, representatives of Hlebine' ||
  ' school, such as Ivan Generalić, Mijo Kovačić, Ivan Večenaj, Dragan Gaži and Ivan Lacković.', 12, 2, 'holder1@gmail.com'),
 
-(13, '2019-11-13 10:30',
+(13, '2020-02-13 10:30',
  '''Russian Jordaenses'' at the Pushkin State Museum of Fine Arts',
  1000,
  'The Pushkin State Museum of Fine Arts will run an exhibition ''Russian Jordaenses''. For the first time, art' ||
@@ -104,7 +104,7 @@ VALUES
  ' the famous Adam van Noort. The representatives of Charles I of England, Queen Henrietta Maria of France and the' ||
  ' House of Orange-Nassau were among his customers.', 13, 1, '+79851231231'),
 
-(14,'2019-10-14 15:00' ,
+(14,'2020-03-14 15:00' ,
  'Exhibition of Serge Lido''s ballet photographs at the Multimedia Art Museum',
  500,
  'Multimedia Art Museum organizes the first Russian exhibition of photographs by Serge Lido, a ballet photographer' ||
@@ -119,62 +119,62 @@ VALUES
  ' female role models and meanings. In an ironic and humorous way, she highlights the prejudices women face in ' ||
  ' societyand the arts.', 15, 1, '+79851231231'),
 
-(16, '2019-11-16 10:30',
+(16, '2020-01-16 10:30',
  '''Vladimir Yankilevsky. Monument Heroïque'' at Multimedia Art Museum',
  1000,
  'Multimedia Art Museum is running the exhibition of Vladimir Yankilevsky, a Soviet artist, one of the participants' ||
  ' of the famous ''30 Years of MOSKh'' (Moscow Regional Union of Artists), the exhibition sharply criticised by' ||
  ' Nikita Khrushchev in 1962.', 16, 2, '+79851231231'),
 
-(17,'2019-10-17 15:00' ,
+(17,'2020-02-17 15:00' ,
  '''Harry Benson. The Beatles and More'' at the Lumière Brothers Photography Centre',
  500,
  'The Lumière Brothers Photography Centre presents Russia''s first exhibition of photojournalist Harry Benson. He' ||
  ' captures US presidents, from Dwight Eisenhower to Barack Obama and Donald Trump. But the Beatles pictures made' ||
  ' Benson really world-famous.', 17, 1, 'holder1@gmail.com'),
 
-(18, '2019-12-18 18:00',
+(18, '2020-02-18 18:00',
  '''A Journey into a Dream. Watercolour and Silk'' at the exhibition halls in Arbat Street',
  2000,
  'The State Pushkin Museum is going to be the first in Russia to host an exhibition of Alexandra Otiyeva, a French' ||
  ' artist born in Russia. The exhibition includes the best works made in different years. She uses a sophisticated' ||
  ' watercolour technique.',  18, 2, '+79851231231'),
 
-(19, '2019-11-19 10:30',
+(19, '2020-01-19 10:30',
  '''Yevgeny Umnov. Favourites. To the 100th Anniversary of His Birthday'' in Multimedia Art Museum',
  1000,
  'Multimedia Art Museum is running an exhibition of Soviet photographer Yevgeny Umnov, with photos from the magazine' ||
  ' Ogonyok and unpublished pictures: ballet photos of the 1950s and 1960s, Maya Plisetskaya, Yuri Levitan, Leonid' ||
  ' Utesov, Mark Bernes, Iya Savvina, Yelena Koreneva, Alexander Gradsky and other artists.', 19, 1, 'holder1@gmail.com'),
 
-(20,'2019-10-20 15:00' ,
+(20,'2020-02-20 15:00' ,
  '''Vertical — Horizontal: Richard Paul Lohse — Vladimir Andreyenkov'' at the Museum of Architecture',
  500,
  'Shchusev State Museum of Architecture  presents the exhibition ''Vertical — Horizontal: Richard Paul Lohse' ||
  ' — Vladimir Andreyenkov''.', 20, 2, '+79851231231'),
 
-(21, '2019-12-21 18:00',
+(21, '2020-03-21 18:00',
  '''Proto-signs'' at the 21st Century Gallery',
  2000,
  ' 21st Century Gallery is opening the exhibition ''Proto-signs'' by Nikolai Selivanov.''Proto-sign'' is a concept to' ||
  ' describe an artwork without words. A proto-sign cannot be fully understood, but one can only perceive its meaning.',
  21, 1, 'holder1@gmail.com'),
 
-(22, '2019-12-21 18:00',
+(22, '2020-02-21 18:00',
     '''Proto-signs'' at the 21st Century Gallery',
     2000,
     ' 21st Century Gallery is opening the exhibition ''Proto-signs'' by Nikolai Selivanov.''Proto-sign'' is a concept' ||
     ' to describe an artwork without words. A proto-sign cannot be fully understood, but' ||
     ' one can only perceive its meaning.', 22, 2, '+79851231231'),
 
-(23, '2019-12-21 18:00',
+(23, '2020-01-21 18:00',
     '''Proto-signs'' at the 21st Century Gallery',
     2000,
     ' 21st Century Gallery is opening the exhibition ''Proto-signs'' by Nikolai Selivanov.''Proto-sign'' is a concept' ||
     ' to describe an artwork without words. A proto-sign cannot be fully understood, but' ||
     ' one can only perceive its meaning.', 23, 1, 'holder1@gmail.com'),
 
-(24, '2019-12-21 18:00',
+(24, '2020-02-21 18:00',
     '''Proto-signs'' at the 21st Century Gallery',
     2000,
     ' 21st Century Gallery is opening the exhibition ''Proto-signs'' by Nikolai Selivanov.''Proto-sign'' is a concept' ||

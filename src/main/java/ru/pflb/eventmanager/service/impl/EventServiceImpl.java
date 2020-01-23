@@ -9,10 +9,11 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import ru.pflb.eventmanager.dto.EventDto;
 import ru.pflb.eventmanager.entity.Event;
-import ru.pflb.eventmanager.exception.DataBaseException;
 import ru.pflb.eventmanager.mapper.impl.EventMapper;
 import ru.pflb.eventmanager.repository.EventRepository;
 import ru.pflb.eventmanager.service.EventService;
+
+import javax.persistence.EntityNotFoundException;
 import java.util.stream.Collectors;
 
 @Slf4j
@@ -38,7 +39,7 @@ public class EventServiceImpl implements EventService {
     @Override
     public EventDto update(EventDto dto) throws JsonProcessingException {
         Event event = repository.findById(dto.getId())
-                .orElseThrow(() -> new DataBaseException(String.format("Event с ID %d не существует.", dto.getId())));
+                .orElseThrow(() -> new EntityNotFoundException(String.format("Event с ID %d не существует.", dto.getId())));
         EventDto eventDTO = mapper.toDto(repository.save(mapper.toEntity(dto, event)));
         log.info("New Event saved: {}", new ObjectMapper().writeValueAsString(eventDTO));
         return eventDTO;
@@ -47,7 +48,7 @@ public class EventServiceImpl implements EventService {
     @Override
     public EventDto get(Long id){
         return mapper.toDto(repository.findById(id)
-                .orElseThrow(() -> new DataBaseException(String.format("Event с ID %d не существует.", id))));
+                .orElseThrow(() -> new EntityNotFoundException(String.format("Event с ID %d не существует.", id))));
     }
 
     @Override

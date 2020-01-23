@@ -9,10 +9,11 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import ru.pflb.eventmanager.dto.CityDto;
 import ru.pflb.eventmanager.entity.City;
-import ru.pflb.eventmanager.exception.DataBaseException;
 import ru.pflb.eventmanager.mapper.impl.CityMapper;
 import ru.pflb.eventmanager.repository.CityRepository;
 import ru.pflb.eventmanager.service.CityService;
+
+import javax.persistence.EntityNotFoundException;
 import java.util.stream.Collectors;
 
 @Slf4j
@@ -38,7 +39,7 @@ public class CityServiceImpl implements CityService {
     @Override
     public CityDto update(CityDto dto) throws JsonProcessingException {
         City city = repository.findById(dto.getId())
-                .orElseThrow(() -> new DataBaseException(String.format("Город с ID %d не существует.", dto.getId())));
+                .orElseThrow(() -> new EntityNotFoundException(String.format("Город с ID %d не существует.", dto.getId())));
         CityDto cityDto = mapper.toDto(repository.save(mapper.toEntity(dto, city)));
         log.info("New City saved: {}", new ObjectMapper().writeValueAsString(cityDto));
         return cityDto;
@@ -47,7 +48,7 @@ public class CityServiceImpl implements CityService {
     @Override
     public CityDto get(Long id){
         return mapper.toDto(repository.findById(id)
-                .orElseThrow(() -> new DataBaseException(String.format("Город с ID %d не существует.", id))));
+                .orElseThrow(() -> new EntityNotFoundException(String.format("Город с ID %d не существует.", id))));
     }
 
     @Override

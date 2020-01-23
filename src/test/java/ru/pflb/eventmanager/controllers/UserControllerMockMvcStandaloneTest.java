@@ -15,6 +15,7 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import ru.pflb.eventmanager.controller.Filter.UserFilter;
 import ru.pflb.eventmanager.controller.UserController;
+import ru.pflb.eventmanager.dto.UserDto;
 import ru.pflb.eventmanager.entity.User;
 import ru.pflb.eventmanager.repository.UserRepository;
 import ru.pflb.eventmanager.service.UserService;
@@ -40,7 +41,7 @@ public class UserControllerMockMvcStandaloneTest {
     @InjectMocks
     private UserController userController;
 
-    private JacksonTester<User> jsonUser;
+    private JacksonTester<UserDto> jsonUser;
 
     @Before
     public void setup() {
@@ -56,14 +57,14 @@ public class UserControllerMockMvcStandaloneTest {
 
     @Test
     public void canRetrieveByIdWhenExists() throws Exception {
-        User alex = new User();
+        UserDto alex = new UserDto();
         alex.setId(2L);
         alex.setFirstName("Alex");
         alex.setLastName("Simpson");
         alex.setUsername("Alex");
         // given
-        given(repository.findById(2L))
-                .willReturn(Optional.of(alex));
+        given(service.get(2L))
+                .willReturn(alex);
 
         // when
         MockHttpServletResponse response = mvc.perform(
@@ -80,7 +81,7 @@ public class UserControllerMockMvcStandaloneTest {
 
     @Test
     public void canRegisterANewUser() throws Exception {
-        User alex = new User();
+        UserDto alex = new UserDto();
         alex.setFirstName("Alex");
         alex.setLastName("Simpson");
         alex.setUsername("Alexandro");

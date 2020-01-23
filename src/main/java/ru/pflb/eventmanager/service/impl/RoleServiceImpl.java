@@ -9,10 +9,11 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import ru.pflb.eventmanager.dto.RoleDto;
 import ru.pflb.eventmanager.entity.Role;
-import ru.pflb.eventmanager.exception.DataBaseException;
 import ru.pflb.eventmanager.mapper.impl.RoleMapper;
 import ru.pflb.eventmanager.repository.RoleRepository;
 import ru.pflb.eventmanager.service.RoleService;
+
+import javax.persistence.EntityNotFoundException;
 import java.util.stream.Collectors;
 
 @Slf4j
@@ -38,7 +39,7 @@ public class RoleServiceImpl implements RoleService {
     @Override
     public RoleDto update(RoleDto dto) throws JsonProcessingException {
         Role role = repository.findById(dto.getId())
-                .orElseThrow(() -> new DataBaseException(String.format("Роль с ID %d не существует.", dto.getId())));
+                .orElseThrow(() -> new EntityNotFoundException(String.format("Роль с ID %d не существует.", dto.getId())));
         RoleDto roleDTO = mapper.toDto(repository.save(mapper.toEntity(dto, role)));
         log.info("New Role saved: {}", new ObjectMapper().writeValueAsString(roleDTO));
         return roleDTO;
@@ -47,7 +48,7 @@ public class RoleServiceImpl implements RoleService {
     @Override
     public RoleDto get(Long id){
         return mapper.toDto(repository.findById(id)
-                .orElseThrow(() -> new DataBaseException(String.format("Роль с ID %d не существует.", id))));
+                .orElseThrow(() -> new EntityNotFoundException(String.format("Роль с ID %d не существует.", id))));
     }
 
     @Override
